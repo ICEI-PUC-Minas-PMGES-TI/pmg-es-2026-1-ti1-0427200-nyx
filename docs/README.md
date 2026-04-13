@@ -106,10 +106,10 @@ Cerca de **75% das mulheres** já sofreram assédio em jogos online. O problema 
 ##  3. Projeto de Interface
 
 ### Fluxo do Usuário
-[Fluxo de usuário 1](images/flux1.png)
-[Fluxo de usuário 2](images/flux2.png)
-[Fluxo de usuário 3](images/flux3.png)
-[Fluxo de usuário 4](images/flux4.png)
+[Fluxo de usuário 1](images/flux1.jpeg)
+[Fluxo de usuário 2](images/flux2.jpeg)
+[Fluxo de usuário 3](images/flux3.jpeg)
+[Fluxo de usuário 4](images/flux4.jpeg)
 
 
 ### Wireframes e Protótipos
