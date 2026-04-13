@@ -65,4 +65,76 @@ Competitivas/Hardcore: Que levam a sério a performance (seja em FPS, MOBAs ou j
 
 Criadoras e Entusiastas: Que buscam networking e uma comunidade que compartilhe os mesmos desafios no mundo tech e gamer.
 
+#Product Discovery
 
+### Matriz CSD (Certezas, Suposições e Dúvidas)
+
+| Certezas | Suposições | Dúvidas |
+| :--- | :--- | :--- |
+| O ambiente online é hostil para mulheres. | Usuárias aceitam verificação de identidade por segurança. | Qual o método de verificação menos invasivo? |
+| A comunicação por voz é o maior gatilho de abusos. | Um ambiente exclusivo aumentará o tempo de jogo das usuárias. | Como escalar a moderação sem perder a agilidade? |
+| Existe demanda por espaços seguros de matchmaking. | Parcerias com desenvolvedoras facilitarão o acesso. | Qual a melhor forma de monetização ética? |
+
+### Mapa de Stakeholders
+* **Primários:** Jogadoras casuais, jogadoras competitivas (eSports) e streamers.
+* **Secundários:** Desenvolvedoras de jogos, organizações de torneios femininos e marcas de hardware.
+* **Internos:** Equipe de desenvolvimento, moderadoras de comunidade e Product Owner.
+
+### Pesquisa e Entendimento do Problema
+Cerca de **75% das mulheres** já sofreram assédio em jogos online. O problema central é a exclusão sistêmica: para evitar conflitos, jogadoras escondem sua identidade ou evitam gêneros competitivos. A Valkyria atua na causa raiz, criando uma infraestrutura onde o gênero não é um fator de risco.
+
+### Personas
+1.  **Aline (24 anos - Hardcore):** Jogadora competitiva de FPS. Domina as mecânicas, mas joga no mudo. Busca um squad fixo para subir de ranking com seriedade e respeito.
+2.  **Beatriz (19 anos - Casual):** Estudante e fã de RPGs. Quer fazer amizades e compartilhar suas conquistas sem ser julgada ou receber comentários condescendentes.
+
+---
+
+##  2. Product Design
+
+### Histórias de Usuários
+* **Segurança:** Como usuária, quero passar por uma verificação de identidade para garantir que estou em um ambiente 100% feminino.
+* **Conexão:** Como jogadora de Fighting Games, quero filtrar parceiras por jogo (ex: Street Fighter) para treinar em um ambiente amigável.
+* **Comunidade:** Como criadora, quero postar clips das minhas jogadas para receber apoio e feedback da comunidade.
+
+### Proposta de Valor
+* **Produtos e Serviços:** Rede social com matchmaking de squads e feed de comunidade moderado.
+* **Aliviadores de Dor:** Filtro de toxicidade, verificação de identidade e sistema de denúncia ágil.
+* **Criadores de Ganho:** Facilidade em encontrar times, ambiente de networking seguro e valorização do talento feminino.
+
+---
+
+##  3. Projeto de Interface
+
+### Fluxo do Usuário
+[Fluxo de usuário 1](images/flux1.png)
+[Fluxo de usuário 2](images/flux2.png)
+[Fluxo de usuário 3](images/flux3.png)
+[Fluxo de usuário 4](images/flux4.png)
+
+
+### Wireframes e Protótipos
+* **Wireframes e Protótipo Interativo:** [TIAW](https://marvelapp.com/prototype/97c4340)
+
+---
+
+## 4. Metodologia e Ferramentas
+
+### Ferramentas Empregadas
+* **Editor de Código:** VS Code (Desenvolvimento em Python e JavaScript).
+* **Comunicação:** Discord (Daily meetings e alinhamento).
+* **Diagramação/Design:** Excalidraw (UI/UX e Protótipo).
+* **Gestão de Tarefas:** GitHub Projects e Miro (Kanban).
+* **Hospedagem:** N/A
+
+### Organização da Equipe (Scrum)
+Utilizamos o framework **Scrum** com ciclos de entrega (Sprints) de 2 semanas.
+* **Product Owner:** Responsável pelo Backlog e visão do produto.
+* **Scrum Master:** Facilitador de processos e remoção de impedimentos.
+* **Dev Team:** Responsável pela implementação técnica e arquitetura.
+
+### Quadro Kanban (Status do Projeto)
+![Kanban](https://miro.com/app/board/uXjVGvS4FkI=/?share_link_id=386671505812)
+
+* **To Do:** Projeto inicial em HTML e CSS.
+* **Doing:** Identidade Visual.
+* **Done:** Protótipos, user flow.
