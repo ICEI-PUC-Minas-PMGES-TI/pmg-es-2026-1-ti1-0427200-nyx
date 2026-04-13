@@ -113,7 +113,7 @@ Cerca de **75% das mulheres** já sofreram assédio em jogos online. O problema 
 
 
 ### Wireframes e Protótipos
-* **Wireframes e Protótipo Interativo:** [TIAW](https://marvelapp.com/prototype/97c4340)
+* **Wireframes e Protótipo Interativo:** [TIAW](images/Kanban.pdf)
 
 ---
 
