@@ -133,7 +133,7 @@ Utilizamos o framework **Scrum** com ciclos de entrega (Sprints) de 2 semanas.
 * **Dev Team:** Responsável pela implementação técnica e arquitetura.
 
 ### Quadro Kanban (Status do Projeto)
-![Kanban](https://miro.com/app/board/uXjVGvS4FkI=/?share_link_id=386671505812)
+![Kanban](https://miro.com/app/board/uXjVGvS4FkI=/?share_link_id=13458464024)
 
 * **To Do:** Projeto inicial em HTML e CSS.
 * **Doing:** Identidade Visual.
