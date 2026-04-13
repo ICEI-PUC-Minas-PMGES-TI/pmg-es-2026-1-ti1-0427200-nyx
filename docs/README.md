@@ -6,11 +6,11 @@ Informações básicas do projeto.
 * **Repositório GitHub:** [Repository](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-nyx)
 * **Membros da equipe:**
 
-  * [Alexandre de Souza Freitas Martins]() 
-  * [André Mozzer Ramos]() 
-  * [Carolina Almeida Mendes de Souza]() 
-  * [Giovanni Arenare Mota]() 
-  * [Gustavo Alberto Araújo de Sá]() 
+  * [Alexandre de Souza Freitas Martins](https://github.com/Xande-01) 
+  * [André Mozzer Ramos](https://github.com/Pwgmy) 
+  * [Carolina Almeida Mendes de Souza](https://github.com/Carolinasouza456) 
+  * [Giovanni Arenare Mota](https://github.com/GiovanniArenare) 
+  * [Gustavo Alberto Araújo de Sá](https://github.com/Gustagusgu) 
   * [Miguel de Freitas Abood](https://github.com/MiguelFAbood)
 
 A documentação do projeto é estruturada da seguinte forma:
