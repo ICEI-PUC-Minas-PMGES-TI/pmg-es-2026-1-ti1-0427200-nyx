@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyria - Edição de Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="content-header">
+                <h1> Edição de perfil </h1>
+        </header>
+        
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+            <nav class="nav-itens">
+                <ul>
+                    <li><button><a href=""><strong>Perfil</strong></a></button></li>
+                    <li><button><a href=""><strong>Chat</strong></a></button></li>
+                    <li><button><a href=""><strong>Fórum</strong></a></button></li>
+                    <li><button><a href=""><strong>Comunidade</strong></a></button></li>
+                    <li><button><a href=""><strong>Denuncia</strong></a></button></li>
+                </ul>
+                <button type="submit" class="fa-solid fa-gear"></button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <form id="form-perfil">
+                <div class="banner-wrapper" onclick="document.getElementById('input-banner').click()">
+                    <div id="banner-preview" class="banner-area">
+                        <span>Clica pra modificar o banner</span>
+                    </div>
+                    <input type="file" id="input-banner" hidden accept="image/*">
+                </div>
+
+                <div class="profile-header">
+                    <div class="avatar-wrapper" onclick="document.getElementById('input-foto').click()">
+                        <div id="foto-preview" class="avatar-circle">
+                            <span>Clica pra modificar a imagem</span>
+                        </div>
+                        <input type="file" id="input-foto" hidden accept="image/*">
+                    </div>
+
+                    <div class="name-id-container">
+                        <div class="input-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" placeholder="Digite o nome">
+                        </div>
+                        <p class="user-id">Id: <span id="display-id">.......</span></p>
+                    </div>
+                </div>
+
+                <div class="details-grid">
+                    <div class="input-group">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" placeholder="Digite alguma coisa sobre você"></textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="interesses">Interesses:</label>
+                        <div class="interesses-box">
+                            <p class="placeholder-text">Escolha seus jogos favoritos:</p>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" value="Valorant"> Valorant</label>
+                                <label><input type="checkbox" value="CS2"> CS2</label>
+                                <label><input type="checkbox" value="LoL"> LoL</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-save">Salvar Alterações</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
