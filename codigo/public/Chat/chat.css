@@ -89,12 +89,12 @@ body {
 }
 
 #header-avatar {
-    width: 65px;  /* Era 45px, agora 65px */
-    height: 65px; /* Mantém a proporção 1:1 */
+    width: 65px;  
+    height: 65px; 
     min-width: 65px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Adiciona um contorno sutil */
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .recipient-info {
@@ -104,12 +104,12 @@ body {
 }
 
 .recipient-info h2 {
-    font-size: 1.4rem; /* Nome do usuário maior */
+    font-size: 1.4rem;
     margin-bottom: 2px;
 }
 
 .status {
-    font-size: 0.9rem; /* Status ligeiramente maior para legibilidade */
+    font-size: 0.9rem; 
 }
 
 .menu-dots {
