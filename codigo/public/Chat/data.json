@@ -1,0 +1,35 @@
+{
+  "chat_screen": {
+    "current_user": {
+      "id": "u0",
+      "username": "ValkyriaPlayer",
+      "avatar": "https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg"
+    },
+    "sidebar_history": [
+      {
+        "conversation_id": "conv_101",
+        "user_id": "u1",
+        "username": "Morgana_GG",
+        "avatar": "https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg",
+        "last_message": "Eu sou suporte, quer jogar depois?",
+        "timestamp": "20:30",
+        "unread_count": 2,
+        "is_online": true
+      }
+    ],
+    "active_conversation": {
+      "id": "conv_101",
+      "recipient": {
+        "id": "u1",
+        "username": "Morgana_GG",
+        "status": "Online",
+        "avatar": "https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg"
+      },
+      "messages": [
+        { "id": "m1", "sender_id": "u1", "text": "Oi! Vi que você joga lol também.", "timestamp": "20:25" },
+        { "id": "m2", "sender_id": "u0", "text": "Opa! Sim, jogo de mid, e vc?", "timestamp": "20:28" },
+        { "id": "m3", "sender_id": "u1", "text": "Eu sou suporte, quer jogar depois?", "timestamp": "20:30" }
+      ]
+    }
+  }
+}

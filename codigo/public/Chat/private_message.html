@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyria - Chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- BARRA LATERAL (Sidebar) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img id="my-avatar" src="https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg" class="my-avatar">
+            </div>
+            
+            <!-- Este container será preenchido pelo JS com o 'sidebar_history' -->
+            <nav id="contact-list" class="contact-list">
+                <!-- Mockup do que o JS vai injetar: -->
+                <!-- <div class="contact-item"> ... </div> -->
+            </nav>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL DO CHAT -->
+        <main class="chat-area">
+            
+            <!-- Cabeçalho do Chat -->
+            <header class="chat-header">
+                <div class="recipient-info">
+                    <img id="header-avatar" src="" class="avatar-img">
+                    <div>
+                        <h2 id="header-username">Carregando...</h2>
+                        <span id="header-status" class="status">Offline</span>
+                    </div>
+                </div>
+                <button class="menu-dots">⋮</button>
+            </header>
+
+            <!-- Lista de Mensagens (Onde a mágica acontece) -->
+            <!-- O ID 'chat-messages' é o alvo principal do seu script.js -->
+            <section id="chat-messages" class="message-list">
+                <!-- As bolhas de chat (messages) entrarão aqui via JS -->
+            </section>
+
+            <!-- Barra de Entrada de Texto -->
+            <footer class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+                    <div class="input-actions">
+                        <button class="emoji" title="Emoji">😊</button>
+                        <button title="Anexar">+</button>
+                        <button title="Enviar" class="send-btn">➤</button>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Importante: O script deve vir ao final para garantir que o DOM já exista -->
+    <script src="script.js"></script>
+</body>
+</html>
