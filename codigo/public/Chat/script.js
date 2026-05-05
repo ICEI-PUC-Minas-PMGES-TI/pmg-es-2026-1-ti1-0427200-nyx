@@ -2,16 +2,12 @@ async function carregarDadosChat() {
     try {
         const resposta = await fetch('data.json');
         const dados = await resposta.json();
-
-        // Pega as informações do destinatário no JSON
         const recipient = dados.chat_screen.active_conversation.recipient;
 
-        // Injeta no HTML usando os IDs corretos
         document.getElementById('header-username').innerText = recipient.username;
         document.getElementById('header-avatar').src = recipient.avatar;
         document.getElementById('header-status').innerText = recipient.status;
-
-        // Chama as outras funções que já estão funcionando
+        
         renderizarMensagens(dados);
         renderizarSidebar(dados.chat_screen.sidebar_history);
 
@@ -41,7 +37,6 @@ function atualizarCabecalho(recipient) {
     document.getElementById('header-avatar').src = recipient.avatar;
     document.getElementById('header-status').innerText = recipient.status;
     
-    // Atualiza ou cria o círculo no header
     const indicator = document.querySelector('.chat-header .status-indicator');
     if (indicator) {
         indicator.className = `status-indicator ${statusClass}`;
@@ -56,7 +51,6 @@ function renderizarMensagens(chatData) {
 
     container.innerHTML = chatData.chat_screen.active_conversation.messages.map(msg => {
         const isMe = msg.sender_id === meuId;
-        // O JS decide qual foto usar baseado no sender_id do JSON
         const avatarParaEstaMensagem = isMe ? meuAvatar : outroAvatar;
 
         return `
@@ -72,7 +66,6 @@ function renderizarSidebar(history) {
     const sidebarContainer = document.getElementById('contact-list');
     
     sidebarContainer.innerHTML = history.map(user => {
-        // Verifica o boolean no JSON para definir a classe de cor
         const statusClass = user.is_online ? 'status-online' : 'status-offline';
 
         return `
