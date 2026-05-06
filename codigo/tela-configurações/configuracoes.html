@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncias</title>
+    <link rel="stylesheet" href="denuncias.css">
+</head>
+<body>
+    <div class="conteudo">
+        <aside class="barra-lateral">
+            <button class="logo-pic"></button>
+            <button class="item-menu btn">Amigos</button>
+            <button class="item-menu btn-foruns">Fóruns</button>
+            <button class="item-menu btn-comunidades">Comunidades</button>
+            <button class="item-menu btn-configuracoes">Configurações</button>
+        </aside>
+    <main class="conteudo-principal">
+    <header class="caixa-cabecalho">
+        <h1>Central de Denúncias</h1>
+    </header>
+    <p class="subtitulo">Todas as denuncias feitas são de forma anônima</p>
+    <form class="formulario" action="#" method="POST">
+        <div class="grupo-input">
+            <label for="tag">Tag do denunciado:</label>
+            <input type="text" id="tag" name="tag">
+        </div>
+        <div class="grupo-input">
+            <label for="local">Onde ocorreu?</label>
+            <input type="text" id="local" name="local">
+        </div>
+        <div class="colunas-do-formulario">
+            <div class="causas">
+                <h3>Quais são as causas da denuncia:</h3>
+                <ul class="lista-radio">
+                    <li><input type="checkbox" name="causa" id="causa1"><label for="causa1">Spam (Conteúdo repetitivo e/ou malicioso.)</label></li>
+                    <li><input type="checkbox" name="causa" id="causa2"><label for="causa2">Assédio (Comportamento ofensivo ou intimidatório.)</label></li>
+                    <li><input type="checkbox" name="causa" id="causa3"><label for="causa3">Discurso de ódio (Ataques a pessoas ou grupos.)</label></li>
+                    <li><input type="checkbox" name="causa" id="causa4"><label for="causa4">Conteúdo Impróprio (Imagens ou textos sexualmente explícitos.)</label></li>
+                    <li><label for="causa5">Outro (Especifique)</label>
+                        <input type="text" name="causa" id="causa5"></li>
+                </ul>
+            </div>
+            <div class="secao-midia">
+                <span class="rotulo-midia">Midia(opcional):</span>
+                <div class="caixa-upload">
+                    <span>Clique para adicionar imagens / Vídeos</span>
+                </div>
+            </div>
+        </div>
+
+
+
