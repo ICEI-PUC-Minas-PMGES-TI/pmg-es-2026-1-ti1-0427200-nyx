@@ -14,7 +14,8 @@ async function carregarDadosChat() {
         // Chama as outras funções que já estão funcionando
         renderizarMensagens(dados);
         renderizarSidebar(dados.chat_screen.sidebar_history);
-
+        renderizarConfiguracoes();
+        configurarToggleSettings()
     } catch (erro) {
         console.error("Erro ao carregar o topo do chat:", erro);
     }
@@ -91,3 +92,37 @@ function renderizarSidebar(history) {
 }
 
 carregarDadosChat();
+
+function renderizarConfiguracoes() {
+    const container = document.getElementById('settings-panel');
+
+    container.innerHTML = `
+        <div class="settings-box">
+            <button class="settings-btn" id="btn-temas">Temas</button>
+            <button class="settings-btn" id="btn-acessibilidade">Acessibilidade</button>
+            <button class="settings-btn" id="btn-conta">Minha Conta</button>
+        </div>
+    `;
+
+    // Eventos dos botões
+    document.getElementById('btn-temas').addEventListener('click', () => {
+        alert('Abrir configurações de temas');
+    });
+
+    document.getElementById('btn-acessibilidade').addEventListener('click', () => {
+        alert('Abrir acessibilidade');
+    });
+
+    document.getElementById('btn-conta').addEventListener('click', () => {
+        alert('Abrir minha conta');
+    });
+}
+
+function configurarToggleSettings() {
+    const btn = document.getElementById('btn-settings');
+    const panel = document.getElementById('settings-panel');
+
+    btn.addEventListener('click', () => {
+        panel.classList.toggle('hidden');
+    });
+}
