@@ -5,30 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valkyria - Edição de Perfil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="../public/assets/css/edicao_perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <aside class="sidebar">
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-        <nav class="nav-itens">
-            <ul>
-                <li><button><a href=""><strong>Perfil</strong></a></button></li>
-                <li><button><a href=""><strong>Chat</strong></a></button></li>
-                <li><button><a href=""><strong>Fórum</strong></a></button></li>
-                <li><button><a href=""><strong>Comunidade</strong></a></button></li>
-                <li><button><a href=""><strong>Denuncia</strong></a></button></li>
-            </ul>
-            <button type="submit" class="fa-solid fa-gear"><a href=""></a></button>
-        </nav>
-    </aside>
 
-    <main class="main-content">
-        <header class="content-header">
-            <h1><strong> Edição de perfil </strong></h1>
+    <main class="main-content w-100">
+        <header class="content-header d-flex align-items-center justify-content-center position-relative">
+            <i class="fa-solid fa-bars position-absolute start-0 ms-4 text-white"></i>
+            <h1 class="m-0"><strong> Edição de perfil </strong></h1>
         </header>
 
         <form id="form-perfil">
@@ -39,7 +29,7 @@
                 <input type="file" id="input-banner" hidden accept="image/*">
             </div>
 
-            <div class="profile-header">
+            <div class="profile-header d-flex">
                 <div class="avatar-wrapper" onclick="document.getElementById('input-foto').click()">
                     <div id="foto-preview" class="avatar-circle">
                         <span>Clica pra modificar a imagem</span>
@@ -47,33 +37,45 @@
                     <input type="file" id="input-foto" hidden accept="image/*">
                 </div>
 
-                <div class="name-id-container">
-                    <div class="input-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" placeholder="Digite o nome">
+                <div class="name-id-container letra_cor_rosa ">
+                    <div>
+                        <label for="nome" class="mt-2 fw-bold ">Nome:</label>
+                        <input type="text" id="nome" class="letra_cor_rosa bg_escuro p-2 boda_rosa w-100 rounded-2 "
+                            placeholder="Digite o nome">
                     </div>
-                    <p class="user-id">Id: <span id="display-id">.......</span></p>
+                    <p class=" mt-2 letra_cor_rosa">Id: <span id="display-id">.......</span></p>
                 </div>
             </div>
+            <div class="container-fluid">
+                <div class=" row mt-5 px-3 pb-5">
+                    <div class=" col-md-6 mb-4 letra_cor_rosa">
+                        <label for="bio" class="fw-bold mr-2">Bio:</label>
+                        <textarea id="bio" placeholder="Digite alguma coisa sobre você"
+                            class="letra_cor_rosa boda_rosa rounded-2 w-100 p-3 bg_escuro"></textarea>
+                    </div>
 
-            <div class="details-grid">
-                <div class="input-group">
-                    <label for="bio">Bio:</label>
-                    <textarea id="bio" placeholder="Digite alguma coisa sobre você"></textarea>
-                </div>
-
-                <div class="input-group">
-                    <label for="interesses">Interesses:</label>
-                    <div class="interesses-box">
-                        <p class="placeholder-text">Escolha seus jogos favoritos:</p>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" value="Valorant"> Valorant</label>
-                            <label><input type="checkbox" value="CS2"> CS2</label>
-                            <label><input type="checkbox" value="LoL"> LoL</label>
-                            <label><input type="checkbox" value="Fortnite"> Fortnite</label>
-                            <label><input type="checkbox" value="Free_Fire"> Free Fire</label>
-                            <label><input type="checkbox" value="Overwath_2"> Overwath 2</label>
-                            <label><input type="checkbox" value="Rocket_League"> Rocket League</label>
+                    <div class=" letra_cor_rosa col-md-6 mb-4">
+                        <label for="interesses" class="fw-bold mr-2">Interesses:</label>
+                        <div class=" boda_rosa rounded-2 bg_escuro p-3">
+                            <p>Escolha seus jogos favoritos:</p>
+                            <div class="checkbox-group d-flex ">
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox"
+                                        value="Valorant">
+                                    Valorant</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox" value="CS2">
+                                    CS2</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox" value="LoL">
+                                    LoL</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox"
+                                        value="Fortnite">
+                                    Fortnite</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox"
+                                        value="Free_Fire"> Free Fire</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox"
+                                        value="Overwath_2"> Overwath 2</label>
+                                <label class="boda_rosa rounded-5 bg_escuro d-flex"><input type="checkbox"
+                                        value="Rocket_League"> Rocket League</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,9 +83,9 @@
         </form>
     </main>
 
-    <footer class="form-actions">
-        <button type="button" class="btn-cancel">Cancelar</button>
-        <button type="submit" class="btn-save">Salvar Alterações</button>
+    <footer class="form-actions p-2 d-flex px-4">
+        <button type="button" class="btn-cancel letra_cor_rosa boda_rosa p-2 rounded-2 fw-bold">Cancelar</button>
+        <button type="submit" class="btn-save letra_cor_rosa boda_rosa p-2 rounded-2">Salvar Alterações</button>
     </footer>
 </body>
 
