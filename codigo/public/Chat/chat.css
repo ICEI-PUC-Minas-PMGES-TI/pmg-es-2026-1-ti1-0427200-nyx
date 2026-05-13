@@ -288,9 +288,9 @@ body {
     justify-content: center;
     padding: 0;
 }
-.settings-gear img {
-    width: 24px;
-    height: 24px;
+.settings-gear img{
+    width: 35px;
+    filter: brightness(0) invert(1);
 }
 
 .settings-floating {

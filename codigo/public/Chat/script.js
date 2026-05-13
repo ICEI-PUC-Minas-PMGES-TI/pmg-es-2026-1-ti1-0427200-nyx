@@ -1,6 +1,6 @@
 async function carregarDadosChat() {
     try {
-        const resposta = await fetch('data.json');
+        const resposta = await fetch('users.json');
         const dados = await resposta.json();
 
         // Pega as informações do destinatário no JSON
@@ -114,7 +114,7 @@ function renderizarConfiguracoes() {
     });
 
     document.getElementById('btn-conta').addEventListener('click', () => {
-        alert('Abrir minha conta');
+        window.location.href = "my_account.html"
     });
 }
 

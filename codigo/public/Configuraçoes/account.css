@@ -1,0 +1,341 @@
+ 
+:root{
+    --sidebar-bg: #2f2644;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f1633;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin-top: 120px;
+}
+
+.titulo{
+    color: white;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 500px;
+    background: #3b275c;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* ================================= */
+/* OVERLAY */
+/* ================================= */
+
+.menu-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.menu-overlay.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ================================= */
+/* MENU GLOBAL */
+/* ================================= */
+
+.global-menu {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 280px;
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    z-index: 1001;
+    transition: 0.4s;
+    padding: 60px 20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+
+    overflow: hidden;
+}
+
+.global-menu.open {
+    left: 0;
+}
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.menu-options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-link{
+    background: #8d5cc2;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.menu-link:hover{
+    background: #a372e0;
+}
+
+/* ================================= */
+/* BOTÃO MENU */
+/* ================================= */
+
+#open-menu{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #8d5cc2;
+    color: white;
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ================================= */
+/* CONTEÚDO */
+/* ================================= */
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.config-box{
+    width: 350px;
+    background: #37284f;
+    border-radius: 30px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo{
+    width: 120px;
+    height: 60px;
+    background: #8d5cc2;
+    border-radius: 20px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.config-btn{
+    background: #8d5cc2;
+    border: none;
+    padding: 18px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* POPUP */
+
+.popup {
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.6);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+
+    width: 350px;
+
+    background: #3d295a;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    animation: aparecer 0.3s ease;
+}
+.device {
+
+    background: #56387e;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.device button {
+
+    background: #1d0f31;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+.popup-content h2 {
+
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.popup-option {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #9560d1;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.popup-option:hover {
+
+    background: #a66df0;
+}
+
+.fechar-popup {
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #241238;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+@keyframes aparecer {
+
+    from {
+
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.card-user {
+
+    margin-top: 30px;
+
+    background: #4b3172;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.avatar {
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+}
+
+.card-user ul {
+
+    list-style: none;
+
+    padding: 0;
+}
