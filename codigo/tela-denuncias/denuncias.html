@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="denuncias.css">
 </head>
 <body>
-    <div class="conteudo">
+    <div class="conteudo"> 
         <aside class="barra-lateral">
             <button class="logo-pic"></button>
             <button class="item-menu btn">Amigos</button>
@@ -16,6 +16,7 @@
             <button class="item-menu btn-configuracoes">Configurações</button>
         </aside>
     <main class="conteudo-principal">
+        <button id="btn-menu" class="botao-menu">☰</button>
     <header class="caixa-cabecalho">
         <h1>Central de Denúncias</h1>
     </header>
@@ -51,6 +52,13 @@
         <footer class="enviar">
             <button type="submit" class="btn-enviar">Enviar Denúncia</button>
         </footer>
+        <script>
+            const botaoMenu = document.getElementById('btn-menu')
+            const barraLateral = document.querySelector('.barra-lateral')
+            botaoMenu.addEventListener('click', function() {
+                barraLateral.classList.toggle('fechada')
+            });
+        </script>
     </form>
 </main>
         </div>
