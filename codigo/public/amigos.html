@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amigos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,13 +17,18 @@
   <!-- barra lateral -->
   <div id="global-menu" class="global-menu">
     <button id="close-menu" class="close-btn">&times;</button>
+    <div class="menu-user">
+      <img id="menu-avatar" src="" alt="Avatar" class="menu-avatar-img">
+      <span id="menu-username" class="menu-username"></span>
+      <span id="menu-bio" class="menu-bio"></span>
+    </div>
     <nav class="menu-options">
       <a href="#" class="menu-link active">Chat</a>
       <a href="#" class="menu-link">Menu Inicial</a>
       <a href="#" class="menu-link">Fórum</a>
     </nav>
-    <footer>
-      <button id="btn-denuncias">Denuncias</button>
+    <footer class="menu-footer">
+      <button id="btn-denuncias" class="btn-denuncias">Denuncias</button>
     </footer>
   </div>
 
@@ -32,9 +39,8 @@
         <span></span><span></span><span></span>
       </button>
       <div id="current-user-info" class="topbar-user">
-        <img id="topbar-avatar" src="https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg"
-          alt="Avatar" class="topbar-avatar">
-        <span id="topbar-username" class="topbar-username">ShibuyaDesu</span>
+        <img id="topbar-avatar" src="" alt="Avatar" class="topbar-avatar">
+        <span id="topbar-username" class="topbar-username"></span>
         <span class="status-dot online"></span>
       </div>
     </header>
@@ -43,74 +49,35 @@
 
       <!-- painel de amigos -->
       <aside id="friends-panel">
-        <h2>Amigos</h2>
-        <button id="btn-add-friend">+ Adicionar amigo</button>
-        <input type="text" id="search-input" placeholder="buscar amigo...">
-        <div id="friends-grid">
-          <div class="friend-card">
-            <div class="friend-avatar">
-              <img src="https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg" alt="MorganaLover123">
-            </div>
-            <p class="friend-name">MorganaLover123</p>
-            <p class="friend-id">id: u1</p>
-            <button class="btn-chat">[chat]</button>
-          </div>
-          <div class="friend-card">
-            <div class="friend-avatar">
-              <img src="https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif" alt="Omae">
-            </div>
-            <p class="friend-name">Omae🌾🌾🌾</p>
-            <p class="friend-id">id: u2</p>
-            <button class="btn-chat">[chat]</button>
-          </div>
+        <div class="panel-header">
+          <h2 class="panel-title">Amigos</h2>
+          <button id="btn-add-friend" class="btn-add">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/>
+              <line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+            Adicionar amigo
+          </button>
+        </div>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="buscar amigo...">
+        </div>
+        <div id="friends-grid" class="friends-grid-wrap">
+          <!-- populado pelo JS -->
         </div>
       </aside>
 
       <!-- feed  -->
       <main id="feed">
-        <h2>Posts dos seus amigos</h2>
-        <article class="post-card">
-          <header class="post-header">
-            <img class="post-avatar" src="https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg"
-              alt="MorganaLover123">
-            <span class="post-username">Nome: MorganaLover123</span>
-            <button class="post-menu">...</button>
-          </header>
-          <p class="post-text">Blahblahblah this is a sample post content that goes here...</p>
-          <div class="post-actions">
-            <button>Curtir</button>
-            <button>Comentar</button>
-            <button>Compartilhar</button>
-          </div>
-        </article>
-        <article class="post-card">
-          <header class="post-header">
-            <img class="post-avatar" src="https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif" alt="Omae">
-            <span class="post-username">Nome: Omae🌾🌾🌾</span>
-            <button class="post-menu">...</button>
-          </header>
-          <p class="post-text">Blahblahblahblahblahblahblah another post with more text...</p>
-          <div class="post-image">[imagem]</div>
-          <div class="post-actions">
-            <button>Curtir</button>
-            <button>Comentar</button>
-            <button>Compartilhar</button>
-          </div>
-        </article>
-        <article class="post-card">
-          <header class="post-header">
-            <img class="post-avatar" src="https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg"
-              alt="MorganaLover123">
-            <span class="post-username">Nome: MorganaLover123</span>
-            <button class="post-menu">...</button>
-          </header>
-          <p class="post-text">Blahblahblah sharing some thoughts here today...</p>
-          <div class="post-actions">
-            <button>Curtir</button>
-            <button>Comentar</button>
-            <button>Compartilhar</button>
-          </div>
-        </article>
+        <h2 class="feed-title">Posts dos seus amigos</h2>
+        <div id="posts-list" class="posts-list">
+          <!-- populado pelo JS -->
+        </div>
       </main>
 
     </div>
