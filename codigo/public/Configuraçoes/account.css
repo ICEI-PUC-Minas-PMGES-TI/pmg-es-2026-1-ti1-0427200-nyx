@@ -1,183 +1,327 @@
- 
 :root{
+
     --sidebar-bg: #2f2644;
+
+    --background: #1f1633;
+
+    --card-bg: #37284f;
+
+    --popup-bg: #3d295a;
+
+    --button-bg: #8d5cc2;
+
+    --button-hover: #a66df0;
+
+    --dark-button: #241238;
+
+    --profile-bg: #4b3172;
+
+    --info-bg: #5f3d8f;
+
+    --text: white;
+
 }
+
+
+/* ================================= */
+/* BODY */
+/* ================================= */
 
 body{
+
     margin: 0;
-    height: 100vh;
+
+    min-height: 100vh;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    background: #1f1633;
+
+    background: var(--background);
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-     margin-top: 120px;
-}
 
-.titulo{
-    color: white;
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.card{
-    width: 500px;
-    background: #3b275c;
-    border-radius: 30px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 /* ================================= */
-/* OVERLAY */
+/* MENU OVERLAY */
 /* ================================= */
 
 .menu-overlay{
+
     position: fixed;
+
     inset: 0;
+
     background: rgba(0,0,0,0.5);
+
     opacity: 0;
+
     visibility: hidden;
+
     transition: 0.3s;
+
     z-index: 1000;
+
 }
 
 .menu-overlay.show{
+
     opacity: 1;
+
     visibility: visible;
+
 }
+
 
 /* ================================= */
 /* MENU GLOBAL */
 /* ================================= */
 
 .global-menu {
+
     position: fixed;
+
     top: 0;
+
     left: -320px;
+
     width: 280px;
+
     height: 100%;
-    background-color: var(--sidebar-bg);
+
+    background: var(--sidebar-bg);
+
     z-index: 1001;
+
     transition: 0.4s;
+
     padding: 60px 20px;
+
     box-shadow: 5px 0 15px rgba(0,0,0,0.5);
 
-    overflow: hidden;
 }
 
 .global-menu.open {
+
     left: 0;
-}
-.close-btn{
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
+
 }
 
+.close-btn{
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+
+/* ================================= */
+/* LINKS MENU */
+/* ================================= */
+
 .menu-options{
+
     display: flex;
+
     flex-direction: column;
+
     gap: 20px;
+
 }
 
 .menu-link{
-    background: #8d5cc2;
+
+    background: var(--button-bg);
+
     color: white;
+
     text-decoration: none;
+
     padding: 18px;
+
     border-radius: 15px;
+
     transition: 0.3s;
+
 }
 
 .menu-link:hover{
-    background: #a372e0;
+
+    background: var(--button-hover);
+
 }
+
 
 /* ================================= */
 /* BOTÃO MENU */
 /* ================================= */
 
 #open-menu{
+
     position: fixed;
+
     top: 20px;
+
     left: 20px;
 
     width: 60px;
+
     height: 60px;
 
     border: none;
+
     border-radius: 15px;
 
-    background: #8d5cc2;
+    background: var(--button-bg);
+
     color: white;
 
     font-size: 30px;
+
     cursor: pointer;
+
+    z-index: 1002;
+
 }
+
 
 /* ================================= */
 /* CONTEÚDO */
 /* ================================= */
 
 .content{
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    height: 100vh;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    padding: 100px 20px;
+
 }
 
+
+/* ================================= */
+/* CAIXA CONFIG */
+/* ================================= */
+
 .config-box{
+
     width: 350px;
-    background: #37284f;
+
+    background: var(--card-bg);
+
     border-radius: 30px;
+
     padding: 30px;
 
     display: flex;
+
     flex-direction: column;
+
     gap: 20px;
+
 }
 
+
+/* ================================= */
+/* LOGO */
+/* ================================= */
+
 .logo{
+
     width: 120px;
+
     height: 60px;
-    background: #8d5cc2;
+
+    background: var(--button-bg);
+
     border-radius: 20px;
 
     margin: 0 auto;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    font-family: Arial, sans-serif;
+
     font-weight: bold;
-}
 
-.config-btn{
-    background: #8d5cc2;
-    border: none;
-    padding: 18px;
-    border-radius: 15px;
     color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-/* POPUP */
 
-.popup {
+}
+
+
+/* ================================= */
+/* BOTÕES */
+/* ================================= */
+
+.config-btn,
+
+.popup-option{
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    background: var(--button-bg);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.config-btn:hover,
+
+.popup-option:hover{
+
+    background: var(--button-hover);
+
+    transform: scale(1.02);
+
+}
+
+
+/* ================================= */
+/* POPUPS */
+/* ================================= */
+
+.popup{
 
     position: fixed;
+
     inset: 0;
 
     background: rgba(0,0,0,0.6);
@@ -185,145 +329,136 @@ body{
     display: none;
 
     justify-content: center;
+
     align-items: center;
 
-    z-index: 1000;
+    z-index: 2000;
+
+    padding: 20px;
+
 }
 
-.popup.active {
+.popup.active{
+
     display: flex;
+
 }
 
-.popup-content {
 
-    width: 350px;
+/* ================================= */
+/* CONTEÚDO POPUP */
+/* ================================= */
 
-    background: #3d295a;
+.popup-content{
 
-    padding: 30px;
+    width: 100%;
+
+    max-width: 400px;
+
+    background: var(--popup-bg);
 
     border-radius: 25px;
 
+    padding: 30px;
+
     display: flex;
+
     flex-direction: column;
 
     gap: 15px;
 
     animation: aparecer 0.3s ease;
-}
-.device {
 
-    background: #56387e;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    margin-top: 10px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
 }
 
-.device button {
 
-    background: #1d0f31;
+/* ================================= */
+/* TITULOS */
+/* ================================= */
 
-    color: white;
-
-    border: none;
-
-    padding: 10px;
-
-    border-radius: 8px;
-
-    cursor: pointer;
-}
-.popup-content h2 {
+.popup-content h2{
 
     color: white;
 
     text-align: center;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+
+    font-size: 35px;
+
 }
 
-.popup-option {
 
-    padding: 15px;
+/* ================================= */
+/* BOTÃO FECHAR */
+/* ================================= */
+
+.fechar-popup{
+
+    margin-top: 10px;
 
     border: none;
+
+    padding: 14px;
 
     border-radius: 15px;
 
-    background: #9560d1;
+    background: var(--dark-button);
 
     color: white;
+
+    cursor: pointer;
 
     font-size: 18px;
 
-    cursor: pointer;
-
-    transition: 0.2s;
 }
 
-.popup-option:hover {
 
-    background: #a66df0;
-}
+/* ================================= */
+/* POPUP INFO */
+/* ================================= */
 
-.fechar-popup {
+#conteudo-info{
 
-    margin-top: 10px;
-
-    padding: 12px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    background: #241238;
+    background: var(--info-bg);
 
     color: white;
-
-    cursor: pointer;
-}
-
-@keyframes aparecer {
-
-    from {
-
-        transform: scale(0.8);
-        opacity: 0;
-    }
-
-    to {
-
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-.card-user {
-
-    margin-top: 30px;
-
-    background: #4b3172;
 
     padding: 20px;
 
-    border-radius: 20px;
+    border-radius: 15px;
 
     text-align: center;
 
-    color: white;
+    font-size: 20px;
+
 }
 
-.avatar {
+
+/* ================================= */
+/* PERFIL */
+/* ================================= */
+
+.card-user{
+
+    width: 280px;
+
+    background: var(--profile-bg);
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.avatar{
 
     width: 120px;
+
     height: 120px;
 
     border-radius: 50%;
@@ -331,11 +466,223 @@ body{
     object-fit: cover;
 
     margin-bottom: 15px;
+
 }
 
-.card-user ul {
+.card-user ul{
 
     list-style: none;
 
     padding: 0;
+
+}
+
+
+/* ================================= */
+/* DISPOSITIVOS */
+/* ================================= */
+
+.device-card{
+
+    background: #56387e;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 10px;
+
+    color: white;
+
+}
+
+.device-card button{
+
+    background: var(--dark-button);
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+/* ================================= */
+/* ANIMAÇÃO */
+/* ================================= */
+
+@keyframes aparecer{
+
+    from{
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    to{
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ================================= */
+/* RESPONSIVO */
+/* ================================= */
+
+@media(max-width: 768px){
+
+    .content{
+
+        flex-direction: column;
+
+        padding-top: 120px;
+
+    }
+
+    .config-box{
+
+        width: 90%;
+
+    }
+
+    .popup-content{
+
+        max-width: 90%;
+
+    }
+
+    .card-user{
+
+        width: 90%;
+
+    }
+
+    .popup-content h2{
+
+        font-size: 28px;
+
+    }
+
+}
+.input-popup{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+    outline: none;
+
+}
+
+.acao-popup{
+
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #8d5cc2;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.acao-popup:hover{
+
+    background: #a66df0;
+
+}
+
+.login-item{
+
+    background: #6d49a3;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    text-align: left;
+
+}
+
+.login-item h3{
+
+    margin: 0;
+
+    color: white;
+
+}
+
+.login-item p{
+
+    margin: 5px 0;
+
+    color: #ddd;
+
+}
+
+.login-item span{
+
+    font-size: 14px;
+
+    color: #bbb;
+
+}
+
+.toggle-item{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #6d49a3;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 10px;
+
+    color: white;
+
 }

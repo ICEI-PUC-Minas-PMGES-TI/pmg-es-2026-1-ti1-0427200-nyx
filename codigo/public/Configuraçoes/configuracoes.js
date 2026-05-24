@@ -1,3 +1,6 @@
+// =============================
+// MENU
+// =============================
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.add('open');
 
             overlay.classList.add('show');
+
         });
 
         const closeMenu = () => {
@@ -23,97 +27,166 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove('open');
 
             overlay.classList.remove('show');
+
         };
 
         if (closeBtn){
+
             closeBtn.addEventListener('click', closeMenu);
+
         }
 
         overlay.addEventListener('click', closeMenu);
+
     }
+
 });
 
-function salvarConfiguracao(idConfig){
 
-    localStorage.setItem(
-        "configSelecionada",
-        idConfig
-    );
-}
+// =============================
+// POPUPS PRINCIPAIS
+// =============================
+
+const popupSeguranca =
+document.getElementById("popup-seguranca");
+
+const popupPrivacidade =
+document.getElementById("popup-privacidade");
+
+const popupNotificacao =
+document.getElementById("popup-notificacao");
+
+const popupConta =
+document.getElementById("popup-conta");
+
+
+// =============================
+// ABRIR POPUPS
+// =============================
 
 document.getElementById("btn-seguranca")
 .addEventListener("click", () => {
 
-    salvarConfiguracao("seguranca");
+    popupSeguranca.classList.add("active");
 
 });
 
 document.getElementById("btn-privacidade")
 .addEventListener("click", () => {
 
-    salvarConfiguracao("privacidade");
+    popupPrivacidade.classList.add("active");
 
-    window.location.href = "privacidade.html";
 });
 
 document.getElementById("btn-notificacao")
 .addEventListener("click", () => {
 
-    salvarConfiguracao("notificacao");
+    popupNotificacao.classList.add("active");
 
-    window.location.href = "notificacao.html";
 });
 
 document.getElementById("btn-conta")
 .addEventListener("click", () => {
 
-    salvarConfiguracao("conta");
-
-    window.location.href = "conta.html";
-});
-// BOTÃO SEGURANÇA
-const btnSeguranca = document.getElementById("btn-seguranca");
-
-// POPUP
-const popup = document.getElementById("popup-seguranca");
-
-const fecharPopup = document.getElementById("fechar-popup");
-
-
-// ABRIR POPUP
-btnSeguranca.addEventListener("click", () => {
-
-    popup.classList.add("active");
-
-});
-
-fecharPopup.addEventListener("click", () => {
-
-    popup.classList.remove("active");
+    popupConta.classList.add("active");
 
 });
 
 
-popup.addEventListener("click", (e) => {
+// =============================
+// FECHAR TODOS
+// =============================
 
-    if(e.target === popup){
+document.querySelectorAll(".fechar")
+.forEach(botao => {
 
-        popup.classList.remove("active");
+    botao.addEventListener("click", () => {
+
+        document.querySelectorAll(".popup")
+        .forEach(popup => {
+
+            popup.classList.remove("active");
+
+        });
+
+    });
+
+});
+
+
+// =============================
+// FECHAR AO CLICAR FORA
+// =============================
+
+document.querySelectorAll(".popup")
+.forEach(popup => {
+
+    popup.addEventListener("click", (e) => {
+
+        if(e.target === popup){
+
+            popup.classList.remove("active");
+
+        }
+
+    });
+
+});
+
+
+// =============================
+// CARREGAR JSON
+// =============================
+
+let dadosGlobais;
+
+async function carregarDados() {
+
+    const response =
+    await fetch("users.json");
+
+    dadosGlobais =
+    await response.json();
+
+    carregarPerfil();
+
+}
+
+carregarDados();
+
+
+// =============================
+// PEGAR USUÁRIO
+// =============================
+
+function pegarUsuario(){
+
+    if(!dadosGlobais){
+
+        return null;
 
     }
 
-});
-let dadosGlobais; fetch("users.json")
+    const currentId =
+    dadosGlobais.current_user_id;
 
-.then(response => response.json())
+    return dadosGlobais.users.find(
+        user => user.id === currentId
+    );
 
-.then(data => {
+}
 
-    const currentId = data.current_user_id;
 
-    const usuario = data.users.find(user => user.id === currentId);
+// =============================
+// PERFIL
+// =============================
 
-    const perfil = document.getElementById("perfil");
+function carregarPerfil(){
+
+    const usuario = pegarUsuario();
+
+    const perfil =
+    document.getElementById("perfil");
 
     perfil.innerHTML = `
 
@@ -127,72 +200,481 @@ let dadosGlobais; fetch("users.json")
 
             <p>
                 Online:
-                ${usuario.is_online ? "🟢 Sim" : "🔴 Não"}
+                ${usuario.is_online
+                    ? "🟢 Sim"
+                    : "🔴 Não"}
             </p>
 
             <h3>Jogos Favoritos</h3>
 
             <ul>
+
                 ${usuario.jogos_favoritos.map(jogo =>
+
                     `<li>${jogo}</li>`
+
                 ).join("")}
+
             </ul>
 
         </div>
 
     `;
 
-})
+}
 
-.catch(error => {
 
-    console.log("Erro:", error);
+// =============================
+// POPUP INFO
+// =============================
+
+const popupInfo =
+document.getElementById("popup-info");
+
+const tituloInfo =
+document.getElementById("titulo-info");
+
+const conteudoInfo =
+document.getElementById("conteudo-info");
+
+const fecharInfo =
+document.getElementById("fechar-info");
+
+
+fecharInfo.addEventListener("click", () => {
+
+    popupInfo.classList.remove("active");
 
 });
 
 
-// CARREGAR DADOS
-async function carregarDados() {
+function abrirInfo(titulo, conteudo){
 
-    let dadosSalvos =
-    localStorage.getItem("dadosUsuarios");
+    tituloInfo.innerHTML = titulo;
 
-    if (dadosSalvos) {
+    conteudoInfo.innerHTML = conteudo;
 
-        dadosGlobais = JSON.parse(dadosSalvos);
-
-    } else {
-
-        const response = await fetch("users.json");
-
-        dadosGlobais = await response.json();
-
-    }
-
-    console.log(dadosGlobais);
+    popupInfo.classList.add("active");
 
 }
 
-carregarDados();
-// BOTÃO
-const btnDispositivos =
-document.getElementById("btn-dispositivos");
 
-// POPUP
+// =============================
+// SENHA
+// =============================
+
+document.getElementById("btn-senha")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Alterar Senha",
+
+        `
+        <div class="info-card">
+
+            <input
+                type="password"
+                id="nova-senha"
+                placeholder="Digite a nova senha"
+                class="input-popup"
+            >
+
+            <button
+                class="acao-popup"
+                onclick="alterarSenha()"
+            >
+                Salvar Nova Senha
+            </button>
+
+            <p id="status-senha"></p>
+
+        </div>
+        `
+    );
+
+});
+
+function alterarSenha(){
+
+    const senha =
+    document.getElementById("nova-senha").value;
+
+    const status =
+    document.getElementById("status-senha");
+
+    if(senha.length < 4){
+
+        status.innerHTML =
+        "Senha muito curta.";
+
+        return;
+
+    }
+
+    status.innerHTML =
+    "Senha alterada com sucesso.";
+
+}
+
+
+
+// =============================
+// 2 FATORES
+// =============================
+
+let verificacao2f = true;
+
+document.getElementById("btn-2fa")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Verificação em 2 Etapas",
+
+        `
+        <div class="info-card">
+
+            <p id="status-2fa">
+
+                ${
+                    verificacao2f
+                    ? "2FA Ativado"
+                    : "2FA Desativado"
+                }
+
+            </p>
+
+            <button
+                class="acao-popup"
+                onclick="toggle2FA()"
+            >
+
+                ${
+                    verificacao2f
+                    ? "Desativar"
+                    : "Ativar"
+                }
+
+            </button>
+
+        </div>
+        `
+    );
+
+});
+
+function toggle2FA(){
+
+    verificacao2f = !verificacao2f;
+
+    document.getElementById("status-2fa")
+    .innerHTML =
+
+    verificacao2f
+    ? "2FA Ativado"
+    : "2FA Desativado";
+
+}
+
+
+
+// =============================
+// HISTÓRICO LOGIN
+// =============================
+
+document.getElementById("btn-login")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Histórico de Login",
+
+        `
+        <div class="info-card historico-box">
+
+            <div class="login-item">
+
+                <h3>Windows PC</h3>
+
+                <p>Belo Horizonte - MG</p>
+
+                <span>Hoje às 14:20</span>
+
+            </div>
+
+            <div class="login-item">
+
+                <h3>Samsung A54</h3>
+
+                <p>São Paulo - SP</p>
+
+                <span>Ontem às 23:10</span>
+
+            </div>
+
+            <div class="login-item">
+
+                <h3>Notebook Gamer</h3>
+
+                <p>Rio de Janeiro - RJ</p>
+
+                <span>2 dias atrás</span>
+
+            </div>
+
+        </div>
+        `
+    );
+
+});
+
+
+
+// =============================
+// PRIVACIDADE
+// =============================
+
+document.getElementById("btn-dados")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Controle de Dados",
+
+        `
+        <div class="info-card">
+
+            <div class="toggle-item">
+
+                <span>Compartilhar Dados</span>
+
+                <input type="checkbox" checked>
+
+            </div>
+
+            <div class="toggle-item">
+
+                <span>Cookies Personalizados</span>
+
+                <input type="checkbox">
+
+            </div>
+
+            <div class="toggle-item">
+
+                <span>Permitir Rastreamento</span>
+
+                <input type="checkbox">
+
+            </div>
+
+        </div>
+        `
+    );
+
+});
+
+
+
+// =============================
+// NOTIFICAÇÕES
+// =============================
+
+let notificacoes = {
+
+    disponibilidade: true,
+
+    mensagens: true,
+
+    posts: false
+
+};
+
+
+// DISPONIBILIDADE
+
+document.getElementById("btn-disponibilidade")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Disponibilidade",
+
+        `
+        <div class="info-card">
+
+            <p id="status-disponibilidade">
+
+                ${
+                    notificacoes.disponibilidade
+                    ? "Ativado"
+                    : "Desativado"
+                }
+
+            </p>
+
+            <button
+                class="acao-popup"
+                onclick="toggleDisponibilidade()"
+            >
+
+                Ativar / Desativar
+
+            </button>
+
+        </div>
+        `
+    );
+
+});
+
+
+function toggleDisponibilidade(){
+
+    notificacoes.disponibilidade =
+    !notificacoes.disponibilidade;
+
+    document.getElementById(
+        "status-disponibilidade"
+    ).innerHTML =
+
+    notificacoes.disponibilidade
+    ? "Ativado"
+    : "Desativado";
+
+}
+
+
+
+// MENSAGENS
+
+document.getElementById("btn-mensagens")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Mensagens",
+
+        `
+        <div class="info-card">
+
+            <p id="status-mensagens">
+
+                ${
+                    notificacoes.mensagens
+                    ? "Ativado"
+                    : "Desativado"
+                }
+
+            </p>
+
+            <button
+                class="acao-popup"
+                onclick="toggleMensagens()"
+            >
+
+                Ativar / Desativar
+
+            </button>
+
+        </div>
+        `
+    );
+
+});
+
+
+function toggleMensagens(){
+
+    notificacoes.mensagens =
+    !notificacoes.mensagens;
+
+    document.getElementById(
+        "status-mensagens"
+    ).innerHTML =
+
+    notificacoes.mensagens
+    ? "Ativado"
+    : "Desativado";
+
+}
+
+
+
+// POSTS
+
+document.getElementById("btn-posts")
+.addEventListener("click", () => {
+
+    abrirInfo(
+
+        "Posts",
+
+        `
+        <div class="info-card">
+
+            <p id="status-posts">
+
+                ${
+                    notificacoes.posts
+                    ? "Ativado"
+                    : "Desativado"
+                }
+
+            </p>
+
+            <button
+                class="acao-popup"
+                onclick="togglePosts()"
+            >
+
+                Ativar / Desativar
+
+            </button>
+
+        </div>
+        `
+    );
+
+});
+
+
+function togglePosts(){
+
+    notificacoes.posts =
+    !notificacoes.posts;
+
+    document.getElementById(
+        "status-posts"
+    ).innerHTML =
+
+    notificacoes.posts
+    ? "Ativado"
+    : "Desativado";
+
+}
+
+
+
+// =============================
+// DISPOSITIVOS
+// =============================
+
 const popupDispositivos =
 document.getElementById("popup-dispositivos");
 
-// FECHAR
-const fecharDispositivos =
-document.getElementById("fechar-dispositivos");
-
-// LISTA
 const listaDispositivos =
 document.getElementById("lista-dispositivos");
 
+const fecharDispositivos =
+document.getElementById("fechar-dispositivos");
 
-// ABRIR POPUP
-btnDispositivos.addEventListener("click", () => {
+
+// ABRIR
+
+document.getElementById("btn-dispositivos")
+.addEventListener("click", () => {
 
     popupDispositivos.classList.add("active");
 
@@ -201,7 +683,8 @@ btnDispositivos.addEventListener("click", () => {
 });
 
 
-// FECHAR POPUP
+// FECHAR
+
 fecharDispositivos.addEventListener("click", () => {
 
     popupDispositivos.classList.remove("active");
@@ -209,32 +692,24 @@ fecharDispositivos.addEventListener("click", () => {
 });
 
 
+// MOSTRAR
+
 function mostrarDispositivos() {
 
-    if (!dadosGlobais) {
-
-        console.log("dados ainda não carregados");
-
-        return;
-    }
-
-    const currentId =
-    dadosGlobais.current_user_id;
-
-    const usuario =
-    dadosGlobais.users.find(
-        user => user.id === currentId
-    );
-
-    console.log(usuario);
+    const usuario = pegarUsuario();
 
     if (!usuario.dispositivos) {
 
         listaDispositivos.innerHTML = `
-            <p>Nenhum dispositivo encontrado.</p>
+
+            <p>
+                Nenhum dispositivo encontrado.
+            </p>
+
         `;
 
         return;
+
     }
 
     listaDispositivos.innerHTML = "";
@@ -251,9 +726,11 @@ function mostrarDispositivos() {
 
                     <p>
 
-                        ${device.online
+                        ${
+                            device.online
                             ? "🟢 Online"
-                            : "⚫ Offline"}
+                            : "⚫ Offline"
+                        }
 
                     </p>
 
@@ -275,20 +752,12 @@ function mostrarDispositivos() {
 
 
 // REMOVER
+
 function removerDispositivo(index) {
 
-    const currentId = dadosGlobais.current_user_id;
-
-    const usuario = dadosGlobais.users.find(
-        user => user.id === currentId
-    );
+    const usuario = pegarUsuario();
 
     usuario.dispositivos.splice(index, 1);
-
-    localStorage.setItem(
-        "dadosUsuarios",
-        JSON.stringify(dadosGlobais)
-    );
 
     mostrarDispositivos();
 
