@@ -1,66 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denúncias</title>
+    <title>Central de Denúncias</title>
     <link rel="stylesheet" href="denuncias.css">
 </head>
 <body>
     <div class="conteudo"> 
-        <aside class="barra-lateral">
+        <aside class="barra-lateral fechada">
             <button class="logo-pic"></button>
             <button class="item-menu btn">Amigos</button>
             <button class="item-menu btn-foruns">Fóruns</button>
             <button class="item-menu btn-comunidades">Comunidades</button>
             <button class="item-menu btn-configuracoes">Configurações</button>
         </aside>
-    <main class="conteudo-principal">
-        <button id="btn-menu" class="botao-menu">☰</button>
-    <header class="caixa-cabecalho">
-        <h1>Central de Denúncias</h1>
-    </header>
-    <p class="subtitulo">Todas as denuncias feitas são de forma anônima</p>
-    <form class="formulario" action="#" method="POST">
-        <div class="grupo-input">
-            <label for="tag">Tag do denunciado:</label>
-            <input type="text" id="tag" name="tag">
-        </div>
-        <div class="grupo-input">
-            <label for="local">Onde ocorreu?</label>
-            <input type="text" id="local" name="local">
-        </div>
-        <div class="colunas-do-formulario">
-            <div class="causas">
-                <h3>Quais são as causas da denuncia:</h3>
-                <ul class="lista-radio">
-                    <li><input type="checkbox" name="causa" id="causa1"><label for="causa1">Spam (Conteúdo repetitivo e/ou malicioso.)</label></li>
-                    <li><input type="checkbox" name="causa" id="causa2"><label for="causa2">Assédio (Comportamento ofensivo ou intimidatório.)</label></li>
-                    <li><input type="checkbox" name="causa" id="causa3"><label for="causa3">Discurso de ódio (Ataques a pessoas ou grupos.)</label></li>
-                    <li><input type="checkbox" name="causa" id="causa4"><label for="causa4">Conteúdo Impróprio (Imagens ou textos sexualmente explícitos.)</label></li>
-                    <li><label for="causa5">Outro (Especifique)</label>
-                        <input type="text" name="causa" id="causa5"></li>
-                </ul>
-            </div>
-            <div class="secao-midia">
-                <span class="rotulo-midia">Midia(opcional):</span>
-                <div class="caixa-upload">
-                    <span>Clique para adicionar imagens / Vídeos</span>
+
+        <main class="conteudo-principal">
+            <button id="btn-menu" class="botao-menu">☰ </button>
+            
+            <header class="caixa-cabecalho">
+                <h1>Central de Denúncias</h1>
+            </header>
+            <p class="subtitulo">Todas as denuncias feitas são de forma anônima</p>
+            
+            <form class="formulario" action="#" method="POST">
+                <div class="grupo-input">
+                    <label for="tag">Tag do denunciado:</label>
+                    <input type="text" id="tag" name="tag">
                 </div>
-            </div>
+                <div class="grupo-input">
+                    <label for="local">Onde ocorreu?</label>
+                    <input type="text" id="local" name="local">
+                </div>
+                
+                <div class="colunas-do-formulario">
+                    <div class="causas">
+                        <h3>Quais são as causas da denuncia:</h3>
+                        <ul class="lista-radio">
+                            <li><input type="checkbox" name="causa" id="causa1"><label for="causa1">Spam (Conteúdo repetitivo e/ou malicioso.)</label></li>
+                            <li><input type="checkbox" name="causa" id="causa2"><label for="causa2">Assédio (Comportamento ofensivo ou intimidatório.)</label></li>
+                            <li><input type="checkbox" name="causa" id="causa3"><label for="causa3">Discurso de ódio (Ataques a pessoas ou grupos.)</label></li>
+                            <li><input type="checkbox" name="causa" id="causa4"><label for="causa4">Conteúdo Impróprio (Imagens ou textos sexualmente explícitos.)</label></li>
+                            <li><label for="causa5">Outro (Especifique)</label>
+                                <input type="text" name="causa" id="causa5"></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="secao-midia">
+                        <span class="rotulo-midia">Midia(opcional):</span>
+                        <input type="file" id="input-arquivo" accept="image/*, video/*" style="display: none;" multiple>
+                        <div class="caixa-upload" id="gatilho-upload">
+                            <span>Clique para adicionar imagens / Vídeos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <footer class="enviar">
+                    <button type="submit" class="btn-enviar">Enviar Denúncia</button>
+                </footer>
+            </form>
+        </main>
+    </div>
+
+    <div id="modal-sucesso" class="modal-overlay">
+        <div class="modal-conteudo">
+            <div class="modal-icone">✓</div>
+            <h2>Denúncia Enviada!</h2>
+            <p>Sua denúncia foi enviada com sucesso.</p>
+            <button id="fechar-modal">Entendido</button>
         </div>
-        <footer class="enviar">
-            <button type="submit" class="btn-enviar">Enviar Denúncia</button>
-        </footer>
-        <script>
-            const botaoMenu = document.getElementById('btn-menu')
-            const barraLateral = document.querySelector('.barra-lateral')
-            botaoMenu.addEventListener('click', function() {
-                barraLateral.classList.toggle('fechada')
-            });
-        </script>
-    </form>
-</main>
-        </div>
+    </div>
+
+    <div id="toast-erro" class="toast-erro">
+        ⚠️ Denúncia Inválida! Preencha a Tag, o Local e escolha uma causa.
+    </div>
+
+    <script>
+        const botaoMenu = document.getElementById('btn-menu');
+        const barraLateral = document.querySelector('.barra-lateral');
+        
+        botaoMenu.addEventListener('click', function() {
+            barraLateral.classList.toggle('fechada');
+        });
+
+        const caixaUpload = document.getElementById('gatilho-upload');
+        const inputArquivo = document.getElementById('input-arquivo');   
+        
+        caixaUpload.addEventListener('click', function() {
+            inputArquivo.click(); 
+        });
+        
+        inputArquivo.addEventListener('change', function() {
+            if (inputArquivo.files.length > 0) {
+                caixaUpload.querySelector('span').innerText = `📌 ${inputArquivo.files.length} arquivo(s) selecionado(s)!`;
+            }
+        });
+
+        const formulario = document.querySelector('.formulario');
+        const modal = document.getElementById('modal-sucesso');
+        const botaoFecharModal = document.getElementById('fechar-modal');
+        const toastErro = document.getElementById('toast-erro');
+
+        formulario.addEventListener('submit', function(evento) {
+            evento.preventDefault(); 
+
+            
+            const tag = document.getElementById('tag').value.trim();
+            const local = document.getElementById('local').value.trim();
+            
+            const causas = document.querySelectorAll('input[name="causa"]:checked');
+
+            
+            if (tag === '' || local === '' || causas.length === 0) {
+            
+                toastErro.classList.add('mostrar');
+                
+                
+                setTimeout(function() {
+                    toastErro.classList.remove('mostrar');
+                }, 3500);
+            } else {
+                
+                modal.classList.add('mostrar');
+            }
+        });
+
+        botaoFecharModal.addEventListener('click', function() {
+            modal.classList.remove('mostrar'); 
+            formulario.reset();
+            caixaUpload.querySelector('span').innerText = "Clique para adicionar imagens / Vídeos";
+        });
+    </script>
 </body>
 </html>
