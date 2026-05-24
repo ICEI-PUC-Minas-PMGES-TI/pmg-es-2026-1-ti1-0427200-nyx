@@ -35,7 +35,7 @@ body {
     gap: 10px; 
     border-right: 2px solid #483661;
     transition: width 0.3s ease, padding 0.3s ease;
-    overflow: hidden
+    overflow: hidden;
     
 }
 .barra-lateral.fechada {
@@ -259,32 +259,35 @@ body {
     text-align: center;
     padding: 10px; 
 }
-
-
 .enviar {
-    margin-top: 25px;
-    display: flex;
+    margin-top: 35px; 
+    display: flex; 
     justify-content: flex-end; 
-}
+    width: 100%; 
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto; 
+    
 
+}
 .btn-enviar {
+    display: inline-block; 
     background-color: #B599C4; 
     color: #2D2836; 
-    border: none;
+    border: none; 
     padding: 12px 30px; 
-    border-radius: 6px;
+    border-radius: 8px; 
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: pointer; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     transition: all 0.3s ease; 
 }
-
 .btn-enviar:hover {
-    background-color: #FFD026; 
-    color: #1A1525; 
-    transform: translateY(-3px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+    background-color: #FFD026;
+    color: #1A1525;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 .modal-overlay {
     position: fixed;
@@ -296,10 +299,12 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000
-
+    z-index: 1000;
 }
 .modal-overlay.mostrar {
+    display: flex; 
+}
+.modal-conteudo {
     background-color: #2D2836;
     border: 2px solid #A286B0;
     padding: 35px;
@@ -314,13 +319,11 @@ body {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
-
 .modal-icone {
     font-size: 40px;
     color: #FFD026;
     margin-bottom: 15px;
 }
-
 .modal-conteudo h2 {
     font-size: 22px;
     margin-bottom: 10px;
