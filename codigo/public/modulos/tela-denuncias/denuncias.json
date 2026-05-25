@@ -1,0 +1,31 @@
+{
+  "denuncias": [
+    {
+      "id": "1",
+      "tag_denunciado": "User_001",
+      "local_ocorrencia": "Chat Privado",
+      "categoria_ids": [2, 3],
+      "especificacao_outro": null,
+      "data_envio": "2026-03-12",
+      "status": "pendente",
+      "evidencia_url": "https://exemplo.com/prova.png"
+    },
+    {
+      "id": "2",
+      "tag_denunciado": "UsuarioDesconhecido#999",
+      "local_ocorrencia": "Fórum Principal",
+      "categoria_ids": [5],
+      "especificacao_outro": "O usuário está se passando por um administrador do sistema.",
+      "data_envio": "2026-01-10",
+      "status": "em_analise",
+      "evidencia_url": null
+    }
+  ],
+  "categorias_denuncia": [
+    { "id": 1, "nome": "Spam", "descricao": "Conteúdo repetitivo malicioso." },
+    { "id": 2, "nome": "Discurso de Ódio", "descricao": "Ataques a pessoas ou grupos." },
+    { "id": 3, "nome": "Assédio", "descricao": "Comportamento intimidador." },
+    { "id": 4, "nome": "Conteúdo Impróprio", "descricao": "Imagens ou textos sexualmente explícitos." },
+    { "id": 5, "nome": "Outros", "descricao": "Outros motivos não listados." }
+  ]
+}
