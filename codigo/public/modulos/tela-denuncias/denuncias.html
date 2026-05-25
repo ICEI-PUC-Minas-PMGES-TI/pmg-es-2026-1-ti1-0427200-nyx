@@ -43,7 +43,8 @@
                             <li><input type="checkbox" name="causa" id="causa3"><label for="causa3">Discurso de ódio (Ataques a pessoas ou grupos.)</label></li>
                             <li><input type="checkbox" name="causa" id="causa4"><label for="causa4">Conteúdo Impróprio (Imagens ou textos sexualmente explícitos.)</label></li>
                             <li><label for="causa5">Outro (Especifique)</label>
-                                <input type="text" name="causa" id="causa5"></li>
+                                <input type="text" name="causa" id="causa5">
+                            </li>
                         </ul>
                     </div>
                     
@@ -115,7 +116,6 @@
             if (tag === '' || local === '' || causas.length === 0) {
             
                 toastErro.classList.add('mostrar');
-                
                 
                 setTimeout(function() {
                     toastErro.classList.remove('mostrar');
