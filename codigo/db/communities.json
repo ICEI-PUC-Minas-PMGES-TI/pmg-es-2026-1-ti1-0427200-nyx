@@ -1,0 +1,76 @@
+{
+    "communities": [
+        {
+            "id": 1,
+            "name": "Valorant",
+            "description": "Tudo sobre Valorant!.",
+            "members": 116,
+            "image_url": "https://media.discordapp.net/attachments/1498308685036916790/1509238902588964894/images.png?ex=6a1873c2&is=6a172242&hm=7418993801fe0a823941459159b0b1168c7a9538c268217888fd3c2b9635a219&=&format=webp&quality=lossless",
+            "tags": ["FPS", "Competitivo", "Riot Games", "Hero Shooter"],
+            "created_at": "2026-05-15T10:00:00Z"
+        },
+        {
+            "id": 2,
+            "name": "Otanix",
+            "description": "Quem sabe, sabe",
+            "members": 67,
+            "image_url": "https://media.discordapp.net/attachments/1498308685036916790/1509241826069053611/MwwTNd0t_400x400.png?ex=6a18767b&is=6a1724fb&hm=0d82f5ef5706b45f8df38a8c986d25dd7e2259dead8f205be0bf93fe50751a98&=&format=webp&quality=lossless",
+            "tags": ["Animes", "Casual", "Conversas"],
+            "created_at": "2026-05-21T14:30:00Z"
+        },
+        {
+            "id": 3,
+            "name": "Street Fighter 6",
+            "description": "A comunidade definitiva para as fãs de Street Fighter 6! Junte-se a nós para discutir estratégias, compartilhar dicas e encontrar parceiros de jogo.",
+            "members": 100,
+            "image_url": "https://media.discordapp.net/attachments/1498308685036916790/1509240990525948066/sf6_cammy_phone_wallpaper_by_cr1one_dfqe1kx-pre.png?ex=6a1875b4&is=6a172434&hm=6d905b8f8747590fd7e09ce0b9b6f0974a8ea447d01d66e63714a16fa6df0d0c&=&format=webp&quality=lossless&width=404&height=875",
+            "tags": ["Luta", "Competitivo", "Capcom", "Arcade"],
+            "created_at": "2026-04-10T08:45:00Z"
+        },
+        {
+            "id": 4,
+            "name": "Guilty Gear Strive", 
+            "description": "O Joguinho mais amado da galerinha. ",
+            "members": 85,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509243526964056074/image.png?ex=6a187811&is=6a172691&hm=225e317580ec7cdef7622ca825766514d033c9507b50fe9d1f89e6c14050940d",
+            "tags": ["Luta", "Competitivo", "Arcade"],
+            "created_at": "2026-05-10T12:00:00Z"
+        },
+        {
+            "id": 5,
+            "name": "Rocket League",
+            "description": "Futebol de carrinho vrum vrum",
+            "members": 90,
+            "image_url": "https://media.discordapp.net/attachments/1498308685036916790/1509248325566730271/flight-flightreacts.png?ex=6a187c89&is=6a172b09&hm=f1bfa7fe857258d0a361d1888841e86d2ed79b8925b60c04e7628bcaee982d11&=&format=webp&quality=lossless",
+            "tags": ["Esportes", "Competitivo", "Psyonix"],
+            "created_at": "2026-04-20T16:30:00Z"
+        },
+        {
+            "id": 6,
+            "name": "League of Legends",
+            "description": "Bora um lolzinho?",
+            "members": 150,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509250149988171878/image.png?ex=6a187e3c&is=6a172cbc&hm=0894341cb66115f229506bda09d5cf29daa3ded7e8bbf151404c628b2b8b7e8a&=&format=webp&quality=lossless",
+            "tags": ["MOBA", "Competitivo", "Riot Games"],
+            "created_at": "2026-03-15T10:00:00Z"
+        },
+        {
+            "id": 7,
+            "name": "CS2",
+            "description": "#SomosTodosFallen",
+            "members": 120,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509270404101832906/Cs2-icon.png?ex=6a189119&is=6a173f99&hm=6873430cd78f3e8618a7c2df55ce7695179474e43e19be52981552dc0e07f83b",
+            "tags": ["FPS", "Competitivo", "Valve"],
+            "created_at": "2026-04-01T12:00:00Z"
+        },
+        {
+            "id": 8,
+            "name": "Overwatch",
+            "description": "Quer um duo pra você? aqui tem de sobra, entra ai, vai ter bolo",
+            "members": 75,
+            "image_url": "https://media.discordapp.net/attachments/1498308685036916790/1509269854610522222/overwatch.png?ex=6a189096&is=6a173f16&hm=bc4368657e40df6b0401374559dbde8b77eaca456118b6ecc303439c800a076f&=&format=webp&quality=lossless&width=1068&height=600",
+            "tags": ["Tiro", "Competitivo", "Blizzard", "Hero Shooter"],
+            "created_at": "2026-05-05T14:00:00Z"
+        }
+    ]
+}

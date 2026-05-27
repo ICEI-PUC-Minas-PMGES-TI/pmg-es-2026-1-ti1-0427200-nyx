@@ -1,0 +1,27 @@
+{
+  "conversations": [
+    {
+      "conversation_id": "conv_101",
+      "participants": ["u0", "u1"],
+      "messages": [
+        { "sender_id": "u1", "text": "Oi! Você joga LoL?", "timestamp": "20:25" },
+        { "sender_id": "u0", "text": "Não :(", "timestamp": "20:28" },
+        { "sender_id": "u1", "text": "Ah :(", "timestamp": "20:30" },
+        {"sender_id": "u0", "text": "Mas jogo outros jogos, tipo Valorant e Guilty Gear", "timestamp": "20:31" },
+        { "sender_id": "u1", "text": "Ah, legal! Eu só jogo LoL mesmo, mas quem sabe a gente não joga algo junto algum dia?", "timestamp": "20:32" },
+        { "sender_id": "u0", "text": "Com certeza! Seria ótimo jogar algo com você :)", "timestamp": "20:32" }
+      ]
+    },
+    {
+      "conversation_id": "conv_102",
+      "participants": ["u0", "u2"],
+      "messages": [
+        { "sender_id": "u2", "text": "Vamo bater um guilty gear?", "timestamp": "22:45" },
+        { "sender_id": "u0", "text": "Calma, tô terminando uma aqui ", "timestamp": "22:46" },
+        { "sender_id": "u2", "text": "Blz", "timestamp": "22:47" },
+        { "sender_id": "u2", "text": "OMAE🌾🌾🌾", "timestamp": "22:47" },
+        { "sender_id": "u0", "text": "OMAE🌾🌾🌾", "timestamp": "22:47" }
+      ]
+    }
+  ]
+}

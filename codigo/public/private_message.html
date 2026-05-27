@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyria - Chat</title>
+    <link rel="stylesheet" href="assets/css/chat.css">
+    <link rel="icon" href="assets/images/logo2.png">
+</head>
+<body>
+
+    <div id="global-menu" class="global-menu">
+        <button id="close-menu" class="close-btn">&times;</button>
+        <nav class="menu-options">
+            <a href="#" class="menu-link active">Chat</a>
+            <a href="#" class="menu-link">Menu Inicial</a>
+            <a href="#" class="menu-link">Fórum</a>
+            <a href="community_search.html" class="menu-link">Comunidades</a>
+        </nav>
+    </div>
+
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-top-actions">
+                <button id="open-menu" class="open-menu-btn">☰</button>
+            </div>
+            
+            <div id="contact-list" class="contact-list">
+                </div>
+
+            <div class="sidebar-user-panel">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <img id="my-avatar" src="..." class="my-avatar">
+                    </div>
+                    <div class="user-text">
+                        <span id="my-username" class="user-name">Name</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="recipient-info">
+                    <img id="header-avatar" src="" class="avatar-img">
+                    <div>
+                        <h2 id="header-username">Carregando...</h2>
+                        <span id="header-status" class="status">Offline</span>
+                    </div>
+                </div>
+                <button class="menu-dots">⋮</button>
+            </header>
+
+            <section id="chat-messages" class="message-list">
+                </section>
+
+            <footer class="chat-input-area">
+                <div id="emoji-picker" class="emoji-picker" style="display: none;">
+                </div>
+
+                <div class="input-wrapper">
+                    <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+                    <div class="input-actions">
+                        <button title="Emoji" id="emoji-btn">😊</button>
+                        <input type="file" id="image-input" accept="image/*" style="display: none;">
+                        <button title="Anexar" id="attach-btn">+</button>   
+                        <button title="Enviar" class="send-btn">➤</button>
+                    </div>
+                </div> 
+            </footer>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script>
+        const pickerOptions = { 
+            onEmojiSelect: (emoji) => {
+            console.log(emoji.native);
+            },
+            theme: 'dark'
+        }
+        const picker = new EmojiMart.Picker(pickerOptions)
+        
+        document.getElementById('emoji-picker').appendChild(picker)
+        </script>
+        <script src="assets/js/script.js"></script>
+</body>
+</html>
