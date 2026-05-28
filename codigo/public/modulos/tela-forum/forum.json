@@ -1,0 +1,112 @@
+{
+  "interface_usuario": {
+    "cabecalho_superior": {
+      "barra_pesquisa": {
+        "tipo": "input",
+        "texto_placeholder": "Pesquisar..."
+      },
+      "menu_opcoes": {
+        "tipo": "icone_lupa",
+        "visivel": true
+      }
+    },
+    "barra_lateral_esquerda": {
+      "cabecalho_lateral": {
+        "logo": {
+          "tipo": "imagem_placeholder",
+          "texto_alternativo": "Logo"
+        }
+      },
+      "menu_navegacao": [
+        {
+          "rotulo": "perfil",
+          "selecionado": false
+        },
+        {
+          "rotulo": "chat",
+          "selecionado": false
+        },
+        {
+          "rotulo": "Denúncias",
+          "selecionado": false
+        },
+        {
+          "rotulo": "Comunidade",
+          "selecionado": false
+        }
+      ],
+      "rodape_lateral": {
+        "icone_configuracoes": {
+          "tipo": "icone_engrenagem",
+          "visivel": true
+        }
+      }
+    },
+    "area_conteudo_principal": {
+      "titulo_pagina": {
+        "texto": "Fórum"
+      },
+      "secao_noticias": {
+        "titulo_secao": "notícias:",
+        "carrossel_noticias": [
+          {
+            "id_cartao": 1,
+            "imagem_capa": "placeholder_imagem_cruzada",
+            "titulo_noticia": "linha_texto_destaque",
+            "resumo_noticia": "linhas_texto_corpo"
+          },
+          {
+            "id_cartao": 2,
+            "imagem_capa": "placeholder_imagem_cruzada",
+            "titulo_noticia": "linha_texto_destaque",
+            "resumo_noticia": "linhas_texto_corpo"
+          },
+          {
+            "id_cartao": 3,
+            "imagem_capa": "placeholder_imagem_cruzada",
+            "titulo_noticia": "linha_texto_destaque",
+            "resumo_noticia": "linhas_texto_corpo"
+          },
+          {
+            "id_cartao": 4,
+            "imagem_capa": "placeholder_imagem_cruzada",
+            "titulo_noticia": "linha_texto_destaque",
+            "resumo_noticia": "linhas_texto_corpo"
+          }
+        ]
+      },
+      "secao_discussoes": {
+        "titulo_secao": "discussões:",
+        "lista_topicos_discussao": [
+          {
+            "id_topico": 1,
+            "info_autor": {
+              "avatar": "placeholder_imagem_circular",
+              "nome_usuario": "user###",
+              "data_postagem": "DATA..."
+            },
+            "conteudo_topico": "linhas_texto_corpo"
+          },
+          {
+            "id_topico": 2,
+            "info_autor": {
+              "avatar": "placeholder_imagem_circular",
+              "nome_usuario": "user###",
+              "data_postagem": "DATA..."
+            },
+            "conteudo_topico": "linhas_texto_corpo"
+          },
+          {
+            "id_topico": 3,
+            "info_autor": {
+              "avatar": "placeholder_imagem_circular",
+              "nome_usuario": "user###",
+              "data_postagem": "DATA..."
+            },
+            "conteudo_topico": "linhas_texto_corpo"
+          }
+        ]
+      }
+    }
+  }
+}
