@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Post</title>
+
+    <link rel="stylesheet" href="./assets/css/posts.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Criar Publicação</h1>
+
+    <form id="postForm">
+
+        <label>Título</label>
+        <input type="text" id="titulo" required>
+
+        <label>Legenda</label>
+        <textarea id="legenda" rows="6"></textarea>
+
+        <label>Foto ou Vídeo</label>
+        <input type="file" id="arquivo"
+        accept="image/*,video/*" required>
+
+        <button type="submit">
+            Publicar
+        </button>
+
+    </form>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
