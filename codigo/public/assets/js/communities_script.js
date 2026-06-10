@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-info">
                     <div class="card-title">${com.name}</div>
                     <div class="card-desc">${com.description}</div>
-                    <button class="card-btn">Entrar</button>
+                    <button class="card-btn" onclick="window.location.href='perfil_comunidade.html?id=${com.id}'">Entrar</button>
                 </div>
             `;
             searchResults.appendChild(card);

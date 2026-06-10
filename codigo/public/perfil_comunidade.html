@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comunidade Gamer</title>
+
+    <link rel="stylesheet" href="assets/css/community.css">
+    <link rel="icon" href="assets/images/logo2.png">
+
+</head>
+<body>
+
+    <button id="open-menu" class="open-menu">
+        ☰
+    </button>
+
+    <div id="menu-overlay"></div>
+
+
+<div id="global-menu" class="global-menu">
+    <button id="close-menu" class="close-btn">&times;</button>
+
+    <nav class="menu-options">
+        <a href="#" class="menu-link active">Chat</a>
+        <a href="#" class="menu-link">Menu Inicial</a>
+        <a href="#" class="menu-link">Fórum</a>
+    </nav>
+</div>
+
+    <div class="page-community">
+
+        <div class="modal-content">
+
+            <div class="community">
+
+                <div class="header-community">
+
+                    <img id="modalImage">
+
+                    <div class="bio">
+
+                        <h2 id="modalTitle"></h2>
+                        <p id="modalDesc"></p>
+
+                    </div>
+
+                    <div class="options">
+
+                        <button>Entrar</button>
+                        <button>Denunciar</button>
+                        <button>Bloquear</button>
+
+                    </div>
+
+                </div>
+
+                <div class="lists">
+
+                    <div class="box">
+
+                        <h2>Membros</h2>
+                        <div id="membersList"></div>
+
+                    </div>
+
+                    <div class="box">
+
+                        <h2>Jogos Jogados</h2>
+                        <div id="gamesList"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/perfil_comu.js"></script>
+
+</body>
+</html>
