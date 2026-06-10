@@ -57,21 +57,21 @@ body{
     visibility:visible;
 }
 
-.global-menu{
-    position:fixed;
-    top:0;
-    left:-280px;
-    width:280px;
-    height:100%;
-    background-color:var(--sidebar-bg);
-    z-index:1001;
-    transition:0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    padding:60px 20px;
-    box-shadow:5px 0 15px rgba(0,0,0,0.5);
+.global-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    z-index: 1001;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 60px 20px;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
 }
 
-.global-menu.open{
-    left:0;
+.global-menu.open {
+    left: 0; 
 }
 
 .close-btn{

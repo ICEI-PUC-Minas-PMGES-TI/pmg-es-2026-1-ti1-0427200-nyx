@@ -36,26 +36,7 @@
         {
             "nome":"Valorant",
             "foto":"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/aefe3c7dbe39ef1da3f4241f4c6b771c535038fc-1920x1080.jpg?accountingTag=VAL"
-        },
-
-        {
-            "nome":"CS2",
-            "foto":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVxvJPtnLQvTodk5P5W6-x4WFEnvZxlKjjsg&s"
-        },
-
-        {
-            "nome":"Overwatch",
-            "foto":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuTycE0TvR0X7yw84XtAGerb4Xy2FZiuvg5g&s"
-        },
-
-        {
-            "nome":"Rainbow Six",
-            "foto":"https://assetsio.gnwcdn.com/co9yqs.jpg?width=2048&height=2048&fit=bounds&quality=85&format=jpg&auto=webp"
-        },
-
-        {
-            "nome":"Apex Legends",
-            "foto":"https://upload.wikimedia.org/wikipedia/pt/a/ad/Apex_legends_capa.jpg"
         }
+
     ]
 }

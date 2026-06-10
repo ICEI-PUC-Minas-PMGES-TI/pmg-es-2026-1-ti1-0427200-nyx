@@ -1,57 +1,41 @@
 const modalTitle = document.getElementById("modalTitle");
-
 const modalDesc = document.getElementById("modalDesc");
-
 const modalImage = document.getElementById("modalImage");
-
 const membersList = document.getElementById("membersList");
-
 const gamesList = document.getElementById("gamesList");
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    const menu = document.getElementById("global-menu");
+    const menu = document.getElementById('global-menu');
+    const overlay = document.getElementById('menu-overlay');
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
 
-    const overlay = document.getElementById("menu-overlay");
+    if (openBtn && menu && overlay) {
+        openBtn.addEventListener('click', () => {
+            menu.classList.add('open');
+            overlay.classList.add('show');
+            openBtn.style.display = 'none';
+        });
 
-    const openBtn = document.getElementById("open-menu");
+        const closeMenu = () => {
+            menu.classList.remove('open');
+            overlay.classList.remove('show');
+            openBtn.style.display = 'flex';
+        };
 
-    const closeBtn = document.getElementById("close-menu");
-
-    openBtn.addEventListener("click", () => {
-
-        menu.classList.add("open");
-
-        overlay.classList.add("show");
-
-        openBtn.style.display = "none";
-
-    });
-
-    function closeMenu(){
-
-        menu.classList.remove("open");
-
-        overlay.classList.remove("show");
-
-        openBtn.style.display = "flex";
-
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        overlay.addEventListener('click', closeMenu);
     }
 
-    closeBtn.addEventListener("click", closeMenu);
-
-    overlay.addEventListener("click", closeMenu);
-
+    carregarComunidade();
 });
-
 async function carregarComunidade(){
 
     try{
 
         const response = await fetch("comunidade.json");
-
         const comunidade = await response.json();
-
         renderizarComunidade(comunidade);
 
     }catch(error){
@@ -65,13 +49,9 @@ async function carregarComunidade(){
 function renderizarComunidade(comunidade){
 
     modalTitle.textContent = comunidade.nome;
-
     modalDesc.textContent = comunidade.descricao;
-
     modalImage.src = comunidade.imagem;
-
     membersList.innerHTML = "";
-
     gamesList.innerHTML = "";
 
     comunidade.membros.forEach(membro => {
@@ -81,7 +61,6 @@ function renderizarComunidade(comunidade){
             <div class="item">
 
                 <img src="${membro.foto}">
-
                 <span>${membro.nome}</span>
 
             </div>
@@ -97,7 +76,6 @@ function renderizarComunidade(comunidade){
             <div class="item">
 
                 <img src="${jogo.foto}">
-
                 <span>${jogo.nome}</span>
 
             </div>
