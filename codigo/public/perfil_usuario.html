@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valkyria - Perfil de Usurio</title>
+    <link rel="icon" href="./assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/perfil_usuario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -15,7 +16,8 @@
 
 <body>
 
-    <div id="global-menu" class="global-menu">
+    <div id="global-menu" class="global-menu ">
+        <img src="assets/images/logo.png" alt="logo" class="logo">
         <button type="button" id="close-menu" class="close-btn">&times;</button>
         <nav class="menu-options">
             <a href="#" class="menu-link">Chat</a>
@@ -31,13 +33,13 @@
         <header class="content-header d-flex align-items-center justify-content-center position-relative">
             <i id="open-menu" class="fa-solid fa-bars position-absolute start-0 ms-4 text-white"
                 style="cursor: pointer;"></i>
-            <h1 class="m-0"><strong> Edição de perfil </strong></h1>
+            <h1 class="m-0"><strong> Valkyria </strong></h1>
         </header>
 
         <div class="banner-container position-relative">
             <div id="perfil-banner" class="banner-bg"></div>
 
-            
+
         </div>
 
         <div class=" user-info-section d-flex">
@@ -53,25 +55,25 @@
                     <p id="perfil-id" class="letra_cor_rosa fs-6">id: ......</p>
                 </div>
 
-                <a href="edicao_perfil.html" id="btn-editar-perfil" class="letra_cor_rosa boda_rosa btn-edit-profile text-decoration-none"
-                    style="display: none;">
-                    <i class="letra_cor_rosa fa-solid fa-pen-to-square me-2"></i>Editar Perfil
+                <a href="edicao_perfil.html" id="btn-editar-perfil"
+                    class="letra_cor_rosa boda_rosa btn-edit-profile text-decoration-none" style="display: none;">
+                    <i class="letra_cor_rosa fa-solid fa-pen-to-square me-2 "></i>Editar Perfil
                 </a>
             </div>
         </div>
-        
+
         <div class="container-fluid ">
             <div class="row mt-4 g-4">
                 <div class="col-12 col-md-6">
                     <div class="rounded-4 boda_rosa bg_escuro p-4 cards">
-                        <h4 class="card-title-purple letra_cor_rosa mb-3">Bio</h4>
+                        <h4 class="card-title-purple letra_cor_rosa mb-3">Bio:</h4>
                         <p id="perfil-bio" class="text-white-50 m-0 fs-5">Nenhuma biografia informada ainda.</p>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                     <div class="rounded-4 boda_rosa bg_escuro p-4 cards">
-                        <h4 class="card-title-purple letra_cor_rosa mb-3">Interesses</h4>
+                        <h4 class="card-title-purple letra_cor_rosa mb-3">Interesses:</h4>
                         <div id="perfil-jogos" class="d-flex flex-wrap gap-2">
                             <span class="text-white-50 text-muted">Nenhum jogo selecionado.</span>
                         </div>
@@ -80,7 +82,7 @@
             </div>
         </div>
     </main>
-
+    <script src="assets/js/perfil_usuario.js"></script>
 </body>
 
 </html>

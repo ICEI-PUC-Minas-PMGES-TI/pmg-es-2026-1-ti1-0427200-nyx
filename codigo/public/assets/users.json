@@ -8,7 +8,11 @@
       "is_online": true,
       "banner": "",
       "bio": "Jogadora de FPS nas horas vagas.",
-      "jogos_favoritos": ["Valorant", "CS2", "Guilty_Gear_Strive"]
+      "jogos_favoritos": [
+        "Valorant",
+        "Free_Fire",
+        "Rocket_League"
+      ]
     },
     {
       "id": "u1",
@@ -17,7 +21,9 @@
       "is_online": true,
       "banner": "",
       "bio": "Suporte mono Morgana.",
-      "jogos_favoritos": ["LoL"]
+      "jogos_favoritos": [
+        "LoL"
+      ]
     },
     {
       "id": "u2",
@@ -26,7 +32,11 @@
       "is_online": false,
       "banner": "",
       "bio": "Gosto de jogos de simulação e fazendinha.",
-      "jogos_favoritos": ["Rocket_League", "Guilty_Gear_Strive"]
+      "jogos_favoritos": [
+        "Rocket_League",
+        "Guilty_Gear_Strive"
+      ]
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

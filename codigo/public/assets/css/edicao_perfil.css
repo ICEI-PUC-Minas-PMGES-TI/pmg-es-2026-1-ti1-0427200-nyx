@@ -109,7 +109,7 @@ textarea {
 }
 
 .checkbox-group label:has(input:checked) {
-    background-color: #4a148c;
+    background-color: #330f4f;
     color: white;
 }
 
@@ -136,13 +136,13 @@ textarea {
 }
 
 .btn-save {
-    background-color: #60009c;
+    background-color: #4a148c;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .btn-save:hover {
-    background-color: #4a148c;
+    background-color: #550faa;
 }
 
 .btn-cancel {
@@ -229,3 +229,6 @@ textarea {
     transition: opacity 0.4s ease;
 }
 
+.logo{
+    width: 90px;
+}

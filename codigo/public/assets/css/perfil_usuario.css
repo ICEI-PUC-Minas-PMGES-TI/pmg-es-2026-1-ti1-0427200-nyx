@@ -11,6 +11,10 @@
     background-color: #13111A;
 }
 
+.bg_roxo {
+    background-color: #330f4f;
+}
+
 .boda_rosa {
     border: 1px solid rgb(235, 199, 255);
 }
@@ -94,7 +98,7 @@ body {
 
 /* BOTÃO EDITAR PERFIL (SÓ APARECE SE FOR O DONO) */
 .btn-edit-profile {
-    background-color: transparent;
+    background-color: #4a148c;
     padding: 8px 20px;
     border-radius: 8px;
     font-weight: bold;
@@ -102,7 +106,7 @@ body {
 }
 
 .btn-edit-profile:hover {
-    background-color: #4a148c;
+    background-color: #550faa;
 }
 
 /* CARDS DE INFORMAÇÕES (BIO E JOGOS) */
@@ -113,6 +117,7 @@ body {
 .cards{
     height: 100%;
 }
+
 
 /* BADGES DOS JOGOS INTERESSADOS */
 :root {
@@ -179,4 +184,8 @@ body {
     display: none; 
     opacity: 0;
     transition: opacity 0.4s ease;
+}
+
+.logo{
+    width: 90px;
 }

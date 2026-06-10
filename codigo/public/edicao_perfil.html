@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valkyria - Edição de Perfil</title>
+    <link rel="icon" href="./assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/edicao_perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -15,6 +16,7 @@
 
 <body>
     <div id="global-menu" class="global-menu">
+        <img src="assets/images/logo.png" alt="logo" class="logo">
         <button type="button" id="close-menu" class="close-btn">&times;</button>
         <nav class="menu-options">
             <a href="#" class="menu-link">Chat</a>
@@ -25,12 +27,13 @@
     </div>
 
     <div id="menu-overlay" class="menu-overlay"></div>
+    
 
     <form id="form-perfil">
         <main class="main-content w-100">
             <header class="content-header d-flex align-items-center justify-content-center position-relative">
                 <i id="open-menu" class="fa-solid fa-bars position-absolute start-0 ms-4 text-white" style="cursor: pointer;"></i>
-                <h1 class="m-0"><strong> Edição de perfil </strong></h1>
+                <h1 class="m-0"><strong> Valkyria </strong></h1>
             </header>
 
             <div class="banner-wrapper" onclick="document.getElementById('input-banner').click()">
@@ -66,7 +69,7 @@
                     <div class="col-md-6 mb-4 letra_cor_rosa">
                         <label for="bio" class="fw-bold mr-2">Bio:</label>
                         <textarea id="bio" placeholder="Digite alguma coisa sobre você"
-                            class="letra_cor_rosa boda_rosa rounded-2 w-100 p-3 bg_escuro"></textarea>
+                            class="letra_cor_rosa boda_rosa rounded-2 w-100 p-3 bg_escuro fs-5"></textarea>
                     </div>
 
                     <div class="letra_cor_rosa col-md-6 mb-4">

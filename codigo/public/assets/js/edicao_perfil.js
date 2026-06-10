@@ -174,10 +174,13 @@ form.addEventListener("submit", async (e) => {
 
         if (response.ok) {
             alert(isEditMode ? "Perfil atualizado com sucesso!" : "Perfil criado com sucesso!");
-            carregarPerfil();
+            setTimeout(() => {
+                window.location.href = `perfil_usuario.html?id=${currentUserId}`;
+            }, 0);
         } else {
             throw new Error("Erro na resposta do servidor.");
         }
+        
     } catch (error) {
         console.error("Erro ao salvar dados:", error);
         alert("Erro de conexão ao salvar.");
@@ -237,7 +240,7 @@ function inicializarMenuLateral() {
 
 btnCancelar.addEventListener("click", () => {
     if (confirm("Quer mesmo cancelar e perder as alterações feitas?")) {
-        carregarPerfil();
+        window.location.href = `perfil_usuario.html?id=${currentUserId}`;
     }
 });
 
