@@ -1,19 +1,19 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Valkyria
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Almeida Mendes de Souza
+    given-names: Carolina
+  - family-names: Alberto Araujo de Sa
+    given-names: Gustavo
+  - family-names: Mozzer Ramos
+    given-names: Andre
+  - family-names: de Souza Freitas Martins
+    given-names: Alexandre
+  - family-names: Arenare e Mota
+    given-names: Giovanni
+  - family-names: de Freitas Abood
+    given-names: Miguel
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: 
