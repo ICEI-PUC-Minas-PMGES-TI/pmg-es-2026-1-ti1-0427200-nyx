@@ -16,16 +16,21 @@ authors:
     given-names: Miguel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: da Silva Jandre
+    given-names: Carolina Rhaian
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: de Quadros Maia Filho
+    given-names: Danilo
 keywords:
-  - 
-  - 
-repository-code: 
+  - Mulher
+  - Gamer
+  - Rede Social
+  - Comunidades
+  - Chats
+  - Conversa
+  - Ambiente Seguro
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti1-0427200-nyx
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
