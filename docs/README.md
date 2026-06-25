@@ -43,7 +43,7 @@ O objetivo principal é a criação de um "Safe Haven" (Porto Seguro) digital. D
 
 Conexão Segura: Facilitar o encontro de jogadoras para que ninguém precise jogar em lobbies públicos tóxicos sozinha.
 
-Moderação Ativa: Implementar um sistema de verificação de identidade para garantir que o ambiente permaneça exclusivamente feminino e seguro.
+Moderação Active: Implementar um sistema de verificação de identidade para garantir que o ambiente permaneça exclusivamente feminino e seguro.
 
 Funcionalidade Prática: Oferecer ferramentas como o "Buscador de Squads", otimizando o matchmaking com base em afinidade e respeito, não apenas em ranking de habilidade.
 
@@ -61,11 +61,11 @@ O foco são mulheres gamers de todos os perfis:
 
 Casuais: Que buscam apenas um ambiente relaxante para jogar após o dia de trabalho/estudo.
 
-Competitivas/Hardcore: Que levam a sério a performance (seja em FPS, MOBAs ou jogos de luta) e precisam de comunicação clara e  estratégica (voz) sem medo de retaliação.
+Competitivas/Hardcore: Que levam a sério a performance (seja em FPS, MOBAs ou jogos de luta) e precisam de comunicação clara e estratégica (voz) sem medo de retaliação.
 
 Criadoras e Entusiastas: Que buscam networking e uma comunidade que compartilhe os mesmos desafios no mundo tech e gamer.
 
-#Product Discovery
+# Product Discovery
 
 ### Matriz CSD (Certezas, Suposições e Dúvidas)
 
@@ -77,7 +77,7 @@ Criadoras e Entusiastas: Que buscam networking e uma comunidade que compartilhe 
 
 ### Mapa de Stakeholders
 * **Primários:** Jogadoras casuais, jogadoras competitivas (eSports) e streamers.
-* **Secundários:** Desenvolvedoras de jogos, organizações de torneios femininos e marcas de hardware.
+* **Secundários:** Desenvolvedoras de jogos, organizations de torneios femininos e marcas de hardware.
 * **Internos:** Equipe de desenvolvimento, moderadoras de comunidade e Product Owner.
 
 ### Pesquisa e Entendimento do Problema
@@ -89,7 +89,7 @@ Cerca de **75% das mulheres** já sofreram assédio em jogos online. O problema 
 
 ---
 
-##  2. Product Design
+## 2. Product Design
 
 ### Histórias de Usuários
 * **Segurança:** Como usuária, quero passar por uma verificação de identidade para garantir que estou em um ambiente 100% feminino.
@@ -103,14 +103,13 @@ Cerca de **75% das mulheres** já sofreram assédio em jogos online. O problema 
 
 ---
 
-##  3. Projeto de Interface
+## 3. Projeto de Interface
 
 ### Fluxo do Usuário
 [Fluxo de usuário 1](images/flux1.jpeg)
 [Fluxo de usuário 2](images/flux2.jpeg)
 [Fluxo de usuário 3](images/flux3.jpeg)
 [Fluxo de usuário 4](images/flux4.jpeg)
-
 
 ### Wireframes e Protótipos
 * **Wireframes e Protótipo Interativo:** [TIAW](images/Kanban.pdf)
@@ -138,3 +137,100 @@ Utilizamos o framework **Scrum** com ciclos de entrega (Sprints) de 2 semanas.
 * **To Do:** Projeto inicial em HTML e CSS.
 * **Doing:** Identidade Visual.
 * **Done:** Protótipos, user flow.
+
+---
+
+# 5. Solução Implementada
+
+## Funcionalidades
+
+Abaixo estão detalhadas as telas que integram a aplicação web Valkyria, mapeando seu comportamento lógico e orientações práticas de uso:
+
+#### 1. Autenticação e Entrada (Login e Sobre Você)
+* **Descrição:** Telas responsáveis pelo controle de acesso. O *Login* valida as credenciais e define qual conta iniciará a sessão (mapeada no endpoint `/current_user_id`). A página *Sobre Você* funciona como um onboarding personalizado, coletando as preferências iniciais da usuária logo após o seu registro.
+* **Instruções de Uso:** A usuária insere seus dados de acesso em `login.html`. Após a validação, a sessão é ativada no sistema e o fluxo redireciona para a dashboard principal.
+
+#### 2. Painel de Controle e Ajustes (Home, Configurações e Menu Lateral)
+* **Descrição:** A *Home* centraliza o feed principal da plataforma e o status do ecossistema. O menu global expansível fornece caminhos para todas as rotas internas, incluindo a tela de *Configurações* operacionais do sistema.
+* **Instruções de Uso:** Através da dashboard inicial, a usuária clica nos componentes visuais ou utiliza a barra lateral para navegar pelas áreas de interação.
+
+#### 3. Identidade e Customização (Perfil e Edição de Perfil)
+* **Descrição:** Renderiza dinamicamente as informações de cadastro, biografia, imagens de avatar/banner e tags de jogos favoritos. Possui proteção condicional client-side: se o identificador em visualização for o mesmo logado (`u0`), as opções para abrir a tela de *Edição de Perfil* ficam visíveis. Se for um acesso a terceiros via URL (ex: `?id=u1`), a aplicação oculta os botões em modo de leitura protegida.
+* **Instruções de Uso:** Acesse `perfil_usuario.html` para gerenciar seus dados. Para modificar suas mídias (convertidas via JavaScript em strings Base64), clique em salvar para atualizar seu perfil.
+
+#### 4. Comunicação Direta (Chat, Amigos e Adicionar Amigos)
+* **Descrição:** Canal privado projetado para matchmaking e networking seguro entre as jogadoras. A interface do *Chat* manipula históricos cronológicos estruturados de forma privada. As páginas de *Amigos* e *Adicionar Amigos* gerenciam as conexões sociais da conta.
+* **Instruções de Uso:** Abra a aba de chat, escolha uma participante ativa na lista de conversas e envie mensagens de texto. O sistema carregará o histórico daquela conversa (ex: `conv_101`) e gravará os novos envios em tempo real.
+
+#### 5. Ambientes Comunitários (Busca de Comunidade, Perfil da Comunidade, Fórum e Posts)
+* **Descrição:** Módulos voltados para o engajamento social em grupo. Fornecem a *Busca de Comunidades* por títulos de jogos específicos. Ao entrar, o *Perfil da Comunidade* apresenta o *Fórum* de discussões e a árvore de *Posts* estruturados para trocas de experiências.
+* **Instruções de Uso:** Pesquise pelo seu jogo favorito, entre no fórum dedicado e participe ativamente lendo os relatos das outras jogadoras ou criando um novo post explicativo.
+
+#### 6. Canal de Moderação (Denúncia)
+* **Descrição:** Funcionalidade central de governança focada em garantir um ambiente seguro e exclusivo para mulheres. Coleta dados de comportamento ofensivo em chats ou posts e encaminha relatórios para análise da moderação.
+* **Instruções de Uso:** Diante de qualquer violação de regras comunitárias, a usuária acessa o formulário de denúncia, anexa as informações solicitadas e envia os dados para processamento ágil.
+
+---
+
+## Estruturas de Dados
+
+Abaixo está representado o esquema unificado de dados reais integrados no arquivo de configuração e persistência local da aplicação (`db.json`):
+
+```json
+{
+  "current_user_id": "u0",
+  "users": [
+    {
+      "id": "u0",
+      "username": "ShibuyaDesu",
+      "avatar": "[https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg](https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg)",
+      "is_online": true,
+      "banner": "",
+      "bio": "Jogadora de FPS nas horas vagas.",
+      "jogos_favoritos": ["Valorant", "CS2", "Guilty_Gear_Strive"]
+    },
+    {
+      "id": "u1",
+      "username": "MorganaLover123",
+      "avatar": "[https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg](https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg)",
+      "is_online": true,
+      "banner": "",
+      "bio": "Suporte mono Morgana.",
+      "jogos_favoritos": ["LoL"]
+    },
+    {
+      "id": "u2",
+      "username": "Omae🌾🌾🌾",
+      "avatar": "[https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif](https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif)",
+      "is_online": false,
+      "banner": "",
+      "bio": "Gosto de jogos de simulação e fazendinha.",
+      "jogos_favoritos": ["Rocket_League", "Guilty_Gear_Strive"]
+    }
+  ],
+  "conversations": [
+    {
+      "conversation_id": "conv_101",
+      "participants": ["u0", "u1"],
+      "messages": [
+        { "sender_id": "u1", "text": "Oi! Você joga LoL?", "timestamp": "20:25" },
+        { "sender_id": "u0", "text": "Não :(", "timestamp": "20:28" },
+        { "sender_id": "u1", "text": "Ah :(", "timestamp": "20:30" },
+        { "sender_id": "u0", "text": "Mas jogo outros jogos, tipo Valorant e Guilty Gear", "timestamp": "20:31" },
+        { "sender_id": "u1", "text": "Ah, legal! Eu só jogo LoL mesmo, mas quem sabe a gente não joga algo junto algum dia?", "timestamp": "20:32" },
+        { "sender_id": "u0", "text": "Com certeza! Seria ótimo jogar algo com você :)", "timestamp": "20:32" }
+      ]
+    },
+    {
+      "conversation_id": "conv_102",
+      "participants": ["u0", "u2"],
+      "messages": [
+        { "sender_id": "u2", "text": "Vamo bater um guilty gear?", "timestamp": "22:45" },
+        { "sender_id": "u0", "text": "Calma, tô terminando uma aqui ", "timestamp": "22:46" },
+        { "sender_id": "u2", "text": "Blz", "timestamp": "22:47" },
+        { "sender_id": "u2", "text": "OMAE🌾🌾🌾", "timestamp": "22:47" },
+        { "sender_id": "u0", "text": "OMAE🌾🌾🌾", "timestamp": "22:47" }
+      ]
+    }
+  ]
+}
