@@ -1,0 +1,191 @@
+{
+  "session": {
+    "id": 1,
+    "current_user_id": "u_mqvh9qgy",
+    "friends": [
+      "u1",
+      "u2",
+      "u3"
+    ]
+  },
+  "users": [
+    {
+      "id": "u0",
+      "username": "ShibuyaDesu",
+      "avatar": "https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg",
+      "is_online": true,
+      "banner": "",
+      "bio": "Jogadora de FPS nas horas vagas.",
+      "jogos_favoritos": [
+        "Valorant",
+        "CS2"
+      ],
+      "interesses": [
+        "Gaming",
+        "Music",
+        "Technology",
+        "Art"
+      ]
+    },
+    {
+      "id": "u1",
+      "username": "MorganaLover123",
+      "avatar": "https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg",
+      "is_online": true,
+      "banner": "",
+      "bio": "Suporte mono Morgana.",
+      "jogos_favoritos": [
+        "LoL"
+      ],
+      "interesses": [
+        "Gaming",
+        "Music",
+        "Art"
+      ]
+    },
+    {
+      "id": "u2",
+      "username": "Omae🌾🌾🌾",
+      "avatar": "https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif",
+      "is_online": false,
+      "banner": "",
+      "bio": "Gosto de jogos de simulação e fazendinha.",
+      "jogos_favoritos": [
+        "Stardew Valley",
+        "Rocket League"
+      ],
+      "interesses": [
+        "Gaming",
+        "Photography",
+        "Travel",
+        "Cooking"
+      ]
+    },
+    {
+      "id": "u3",
+      "username": "PixelMage",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=PixelMage",
+      "is_online": true,
+      "banner": "",
+      "bio": "Apaixonada por RPGs e pixel art.",
+      "jogos_favoritos": [
+        "Hades",
+        "Celeste",
+        "Sea of Stars"
+      ],
+      "interesses": [
+        "Art",
+        "Design",
+        "Photography",
+        "Reading"
+      ]
+    },
+    {
+      "id": "u4",
+      "username": "NeonDrifter",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=NeonDrifter",
+      "is_online": true,
+      "banner": "",
+      "bio": "Amante de synthwave e jogos retrô.",
+      "jogos_favoritos": [
+        "Hades",
+        "Valorant"
+      ],
+      "interesses": [
+        "Gaming",
+        "Music",
+        "Art",
+        "Technology",
+        "Photography"
+      ]
+    },
+    {
+      "id": "u5",
+      "username": "CosmoCaster",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=CosmoCaster",
+      "is_online": false,
+      "banner": "",
+      "bio": "Streamer de FPS e fã de sci-fi.",
+      "jogos_favoritos": [
+        "CS2",
+        "Rocket League"
+      ],
+      "interesses": [
+        "Sports",
+        "Movies",
+        "Cooking",
+        "Travel"
+      ]
+    },
+    {
+      "id": "u6",
+      "username": "SakuraPixel",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=SakuraPixel",
+      "is_online": true,
+      "banner": "",
+      "bio": "Ilustradora digital e otaku assumida.",
+      "jogos_favoritos": [
+        "Celeste",
+        "Stardew Valley"
+      ],
+      "interesses": [
+        "Reading",
+        "Music",
+        "Photography",
+        "Design"
+      ]
+    },
+    {
+      "id": "u_mqvh9qgy",
+      "username": "schwi123",
+      "password": "schwi123",
+      "bio": "aa",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=schwi123",
+      "is_online": true,
+      "interesses": [],
+      "friends": []
+    }
+  ],
+  "posts": [
+    {
+      "id": "p1",
+      "author_id": "u1",
+      "text": "Ranqueei hoje com Morgana suporte e fui campeã do jogo. Absolutamente dominando as bot lanes. 🌹",
+      "image_url": "",
+      "created_at": "2026-05-20T19:30:00-03:00",
+      "likes": 12,
+      "comments": 4,
+      "shares": 1
+    },
+    {
+      "id": "p2",
+      "author_id": "u2",
+      "text": "Nova fazenda no Stardew Valley ficou incrível! Plantei batatas e cenouras esse ano.",
+      "image_url": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80",
+      "created_at": "2026-05-19T17:10:00-03:00",
+      "likes": 25,
+      "comments": 5,
+      "shares": 2
+    },
+    {
+      "id": "p3",
+      "author_id": "u1",
+      "text": "Alguém mais jogou a nova atualização? Consegui chegar ao Diamante finalmente! 💎",
+      "image_url": "",
+      "created_at": "2026-05-18T21:05:00-03:00",
+      "likes": 18,
+      "comments": 4,
+      "shares": 3
+    },
+    {
+      "id": "p4",
+      "author_id": "u3",
+      "text": "Terminei uma fanart nova hoje. Nada supera a sensação de ver o desenho ganhando forma depois de horas de tentativa.",
+      "image_url": "",
+      "created_at": "2026-05-17T13:45:00-03:00",
+      "likes": 32,
+      "comments": 7,
+      "shares": 4
+    }
+  ]
+}
