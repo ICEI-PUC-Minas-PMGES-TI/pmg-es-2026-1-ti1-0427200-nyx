@@ -1,112 +1,25 @@
 {
-  "interface_usuario": {
-    "cabecalho_superior": {
-      "barra_pesquisa": {
-        "tipo": "input",
-        "texto_placeholder": "Pesquisar..."
-      },
-      "menu_opcoes": {
-        "tipo": "icone_lupa",
-        "visivel": true
-      }
+  "denuncias": [],
+  "noticias": [
+    {
+      "id": "1",
+      "titulo": "Atualização do LoL",
+      "resumo": "Confira as atualizações do novo patch do LoL...",
+      "imagem": "https://prod.assets.earlygamecdn.com/images/Map_BG.jpg?transform=Article+Webp&x=0.5&y=0.5"
     },
-    "barra_lateral_esquerda": {
-      "cabecalho_lateral": {
-        "logo": {
-          "tipo": "imagem_placeholder",
-          "texto_alternativo": "Logo"
-        }
-      },
-      "menu_navegacao": [
-        {
-          "rotulo": "perfil",
-          "selecionado": false
-        },
-        {
-          "rotulo": "chat",
-          "selecionado": false
-        },
-        {
-          "rotulo": "Denúncias",
-          "selecionado": false
-        },
-        {
-          "rotulo": "Comunidade",
-          "selecionado": false
-        }
-      ],
-      "rodape_lateral": {
-        "icone_configuracoes": {
-          "tipo": "icone_engrenagem",
-          "visivel": true
-        }
-      }
-    },
-    "area_conteudo_principal": {
-      "titulo_pagina": {
-        "texto": "Fórum"
-      },
-      "secao_noticias": {
-        "titulo_secao": "notícias:",
-        "carrossel_noticias": [
-          {
-            "id_cartao": 1,
-            "imagem_capa": "placeholder_imagem_cruzada",
-            "titulo_noticia": "linha_texto_destaque",
-            "resumo_noticia": "linhas_texto_corpo"
-          },
-          {
-            "id_cartao": 2,
-            "imagem_capa": "placeholder_imagem_cruzada",
-            "titulo_noticia": "linha_texto_destaque",
-            "resumo_noticia": "linhas_texto_corpo"
-          },
-          {
-            "id_cartao": 3,
-            "imagem_capa": "placeholder_imagem_cruzada",
-            "titulo_noticia": "linha_texto_destaque",
-            "resumo_noticia": "linhas_texto_corpo"
-          },
-          {
-            "id_cartao": 4,
-            "imagem_capa": "placeholder_imagem_cruzada",
-            "titulo_noticia": "linha_texto_destaque",
-            "resumo_noticia": "linhas_texto_corpo"
-          }
-        ]
-      },
-      "secao_discussoes": {
-        "titulo_secao": "discussões:",
-        "lista_topicos_discussao": [
-          {
-            "id_topico": 1,
-            "info_autor": {
-              "avatar": "placeholder_imagem_circular",
-              "nome_usuario": "user###",
-              "data_postagem": "DATA..."
-            },
-            "conteudo_topico": "linhas_texto_corpo"
-          },
-          {
-            "id_topico": 2,
-            "info_autor": {
-              "avatar": "placeholder_imagem_circular",
-              "nome_usuario": "user###",
-              "data_postagem": "DATA..."
-            },
-            "conteudo_topico": "linhas_texto_corpo"
-          },
-          {
-            "id_topico": 3,
-            "info_autor": {
-              "avatar": "placeholder_imagem_circular",
-              "nome_usuario": "user###",
-              "data_postagem": "DATA..."
-            },
-            "conteudo_topico": "linhas_texto_corpo"
-          }
-        ]
-      }
+    {
+      "id": "2",
+      "titulo": "Jogos em promoção na Steam",
+      "resumo": "Clique para ver as atuais promoções da Steam!",
+      "imagem": "https://cdn-comparador.minhaconexao.com.br/cms/2022/02/01/61f9469a57584steam.jpg"
     }
-  }
+  ],
+  "discussoes": [
+    {
+      "id": "1",
+      "autor": "Meiga_e_abusada#102",
+      "data": "Hoje às 9:36",
+      "texto": "Como faço para matar a Malenia?? ALGUÉM ME AJUDA!!"
+    }
+  ]
 }
