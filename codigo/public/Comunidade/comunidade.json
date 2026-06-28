@@ -1,0 +1,42 @@
+{
+    "nome":"Valorant",
+
+    "descricao":"Comunidade focada em jogadores de Valorant. Compartilhe estratégias, encontre times, converse sobre atualizações e participe de campeonatos.",
+
+    "imagem":"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/aefe3c7dbe39ef1da3f4241f4c6b771c535038fc-1920x1080.jpg?accountingTag=VAL",
+
+    "membros":[
+        {
+            "nome":"LunaFPS",
+            "foto":"https://i.pinimg.com/736x/2b/26/15/2b26150b004d28f328c78afa6e55fa11.jpg"
+        },
+
+        {
+            "nome":"ZyraBR",
+            "foto":"https://i.pinimg.com/736x/b3/59/53/b35953f91791c22e03130370b9bed39c.jpg"
+        },
+
+        {
+            "nome":"Kaori",
+            "foto":"https://i.pinimg.com/736x/35/21/3e/35213ea10d630d0fc6c6c6a4474dbc55.jpg"
+        },
+
+        {
+            "nome":"Lunar",
+            "foto":"https://i.pinimg.com/474x/43/cf/c7/43cfc7dde9456b94d2353733473c38ab.jpg"
+        },
+
+        {
+            "nome":"Mono_Viper",
+            "foto":"https://i.pinimg.com/1200x/19/82/49/1982495349b4c7cd284ea28b1f6dc855.jpg"
+        }
+    ],
+
+    "jogos":[
+        {
+            "nome":"Valorant",
+            "foto":"https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/aefe3c7dbe39ef1da3f4241f4c6b771c535038fc-1920x1080.jpg?accountingTag=VAL"
+        }
+
+    ]
+}

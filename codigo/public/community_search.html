@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyria - Busca de Comunidades</title>
+    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="icon" href="assets/images/logo2.png">
+</head>
+<body>
+
+    <div id="global-menu" class="global-menu">
+        <button id="close-menu" class="close-btn">&times;</button>
+        <nav class="menu-options">
+            <a href="private_message.html" class="menu-link">Chat</a>
+            <a href="#" class="menu-link">Menu Inicial</a>
+            <a href="#" class="menu-link">Fórum</a>
+            <a href="#" class="menu-link active">Comunidades</a>
+        </nav>
+    </div>
+
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <div class="app-container">
+        
+        <aside>
+            <div class="sidebar-top-actions">
+                <button id="open-menu" class="open-menu-btn">☰</button>
+            </div>
+            
+            <div id="contact-list" class="contact-list">
+                </div>
+            </div>
+        </aside>
+        <main class="search-area">
+            <header class="search-header">
+                <h2>Pesquisar Comunidades</h2>
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Digite o nome da comunidade..." class="search-input">
+                <button id="toggle-tags-btn" class="toggle-tags-btn" title="Filtrar por tags">+</button>
+            </div>
+
+            <div id="tags-panel" class="tags-panel hidden">
+                </div>
+
+            <section id="search-results" class="search-results">
+                </section>
+        </main>
+        <script src="assets/js/communities_script.js"></script>
+</body>
+</html>

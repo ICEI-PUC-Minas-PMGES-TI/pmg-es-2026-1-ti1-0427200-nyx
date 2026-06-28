@@ -1,0 +1,150 @@
+{
+  "current_user_id": "u0",
+
+  "users": [
+
+    {
+      "id": "u0",
+
+      "username": "ShibuyaDesu",
+
+      "avatar": "https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg",
+
+      "is_online": true,
+
+      "banner": "",
+
+      "bio": "Jogadora de FPS nas horas vagas.",
+
+      "jogos_favoritos": [
+
+        "Valorant",
+        "CS2"
+
+      ],
+
+      "dispositivos": [
+
+        {
+          "id": "d1",
+          "nome": "Windows PC",
+          "online": true
+        },
+
+        {
+          "id": "d2",
+          "nome": "Samsung A54",
+          "online": true
+        },
+
+        {
+          "id": "d3",
+          "nome": "Notebook Gamer",
+          "online": false
+        }
+
+      ],
+
+      "seguranca": {
+
+        "senha": "Última alteração: 10 dias",
+
+        "verificacao2f": true,
+
+        "historico_login": "5 logins recentes",
+
+        "info_senha": "Sua senha foi alterada recentemente e está protegida.",
+
+        "info_2fa": "A autenticação em 2 etapas está ativa na conta.",
+
+        "info_dispositivos": "Você possui 3 dispositivos conectados.",
+
+        "info_login": "Últimos acessos detectados sem atividades suspeitas."
+
+      },
+
+      "privacidade": {
+
+        "usuarios_bloqueados": 12,
+
+        "mensagens_reportadas": 3,
+
+        "controle_dados": "Ativado",
+
+        "info_bloqueados": "Você bloqueou 12 usuários.",
+
+        "info_reportadas": "Existem 3 mensagens reportadas.",
+
+        "info_dados": "Seu compartilhamento de dados está ativado."
+
+      },
+
+      "notificacoes": {
+
+        "disponibilidade": true,
+
+        "mensagens": true,
+
+        "posts": false,
+
+        "info_disponibilidade": "Notificações de disponibilidade ativadas.",
+
+        "info_mensagens": "Você receberá notificações de mensagens.",
+
+        "info_posts": "As notificações de posts estão desligadas."
+
+      },
+
+      "conta": {
+
+        "editar_perfil": "Perfil atualizado recentemente",
+
+        "status_conta": "Conta Premium",
+
+        "email": "shibuyadesu@email.com",
+
+        "info_editar": "Seu perfil pode ser editado a qualquer momento.",
+
+        "info_sair": "Ao sair da conta será necessário fazer login novamente."
+
+      }
+
+    },
+    {
+      "id": "u1",
+
+      "username": "MorganaLover123",
+
+      "avatar": "https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg",
+
+      "is_online": true,
+
+      "banner": "",
+
+      "bio": "Suporte mono Morgana.",
+
+      "jogos_favoritos": [
+        "LoL"
+      ]
+    },
+
+    {
+      "id": "u2",
+
+      "username": "Omae🌾🌾🌾",
+
+      "avatar": "https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif",
+
+      "is_online": false,
+
+      "banner": "",
+
+      "bio": "Gosto de jogos de simulação e fazendinha.",
+
+      "jogos_favoritos": [
+        "Rocket_League"
+      ]
+    }
+
+  ]
+}

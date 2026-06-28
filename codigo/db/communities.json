@@ -1,0 +1,76 @@
+{
+    "communities": [
+        {
+            "id": 1,
+            "name": "Valorant",
+            "description": "Tudo sobre Valorant!.",
+            "members": 116,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509238902588964894/images.png?ex=6a2ae8c2&is=6a299742&hm=7db3a0a794a1dea4dc89021f76ef705225a1dc61d7e0315892b1a3f0b4f02d91",
+            "tags": ["FPS", "Competitivo", "Riot Games", "Hero Shooter", "Tiro"],
+            "created_at": "2026-05-15T10:00:00Z"
+        },
+        {
+            "id": 2,
+            "name": "Otanix",
+            "description": "Quem sabe, sabe",
+            "members": 67,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509241826069053611/MwwTNd0t_400x400.png?ex=6a2aeb7b&is=6a2999fb&hm=b075e14bf80a7e4188f71be1c8a8b4caf15ed0871640a2695765ac84d4ebbe8e",
+            "tags": ["Animes", "Casual", "Conversas"],
+            "created_at": "2026-05-21T14:30:00Z"
+        },
+        {
+            "id": 3,
+            "name": "Street Fighter 6",
+            "description": "A comunidade definitiva para as fãs de Street Fighter 6! Junte-se a nós para discutir estratégias, compartilhar dicas e encontrar parceiros de jogo.",
+            "members": 100,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509240990525948066/sf6_cammy_phone_wallpaper_by_cr1one_dfqe1kx-pre.png?ex=6a2aeab4&is=6a299934&hm=1d8bda5cc93cd782ba8209d8755ea8407f3586b82c06b3af3a6e828936f97aa8",
+            "tags": ["Luta", "Competitivo", "Capcom", "Arcade"],
+            "created_at": "2026-04-10T08:45:00Z"
+        },
+        {
+            "id": 4,
+            "name": "Guilty Gear Strive", 
+            "description": "O Joguinho mais amado da galerinha. ",
+            "members": 85,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509243526964056074/image.png?ex=6a2aed11&is=6a299b91&hm=10af7cb4338cf3c8baf455f45c218ea7973129b6397b4c52ecc767b5d589ba65",
+            "tags": ["Luta", "Competitivo", "Arcade"],
+            "created_at": "2026-05-10T12:00:00Z"
+        },
+        {
+            "id": 5,
+            "name": "Rocket League",
+            "description": "Futebol de carrinho vrum vrum",
+            "members": 90,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509248325566730271/flight-flightreacts.png?ex=6a2af189&is=6a29a009&hm=792b83d2af7184438660b57539b1501da1d415038a63c0ceee6c1bf826dd675c",
+            "tags": ["Esportes", "Competitivo", "Psyonix"],
+            "created_at": "2026-04-20T16:30:00Z"
+        },
+        {
+            "id": 6,
+            "name": "League of Legends",
+            "description": "Bora um lolzinho?",
+            "members": 150,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509250149988171878/image.png?ex=6a2af33c&is=6a29a1bc&hm=bf797b2eff7da63aa5b1b8d869bb84216e97e8fc67de89af6e816d05d8a46e85",
+            "tags": ["MOBA", "Competitivo", "Riot Games"],
+            "created_at": "2026-03-15T10:00:00Z"
+        },
+        {
+            "id": 7,
+            "name": "CS2",
+            "description": "#SomosTodosFallen",
+            "members": 120,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509270404101832906/Cs2-icon.png?ex=6a2b0619&is=6a29b499&hm=29ffe67c303279f5947f5826448d2a94f983988d72214ca60434b7aaf765a6fc",
+            "tags": ["FPS", "Competitivo", "Valve", "Tiro"],
+            "created_at": "2026-04-01T12:00:00Z"
+        },
+        {
+            "id": 8,
+            "name": "Overwatch",
+            "description": "Quer um duo pra você? aqui tem de sobra, entra ai, vai ter bolo",
+            "members": 75,
+            "image_url": "https://cdn.discordapp.com/attachments/1498308685036916790/1509269854610522222/overwatch.png?ex=6a2b0596&is=6a29b416&hm=32b59596a63bdb624c3aadf71811c18473644e9133682f1ede91ef6347ff1959",
+            "tags": ["Tiro", "Competitivo", "Blizzard", "Hero Shooter"],
+            "created_at": "2026-05-05T14:00:00Z"
+        }
+    ]
+}

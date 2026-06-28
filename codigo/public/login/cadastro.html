@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cadastro_style.css">
+</head>
+<body>
+
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="24" fill="url(#g2)"/>
+          <path d="M24 12a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm-11 22c0-5 4.9-9 11-9s11 4 11 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <defs>
+            <radialGradient id="g2" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#9b7ee0"/>
+              <stop offset="100%" stop-color="#3b1f7a"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <span class="auth-logo-text">Nyx</span>
+      </div>
+
+      <h1 class="auth-title">Criar conta</h1>
+      <p class="auth-subtitle">Preencha os dados para se cadastrar</p>
+
+      <p id="feedback" class="feedback" role="alert" aria-live="polite"></p>
+
+      <div class="auth-form" id="register-form">
+        <div class="field">
+          <label for="reg-username" class="field-label">Usuário</label>
+          <input type="text" id="reg-username" class="field-input" placeholder="seu_username" autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="reg-bio" class="field-label">Bio <span class="field-optional">(opcional)</span></label>
+          <input type="text" id="reg-bio" class="field-input" placeholder="Uma frase sobre você...">
+        </div>
+        <div class="field">
+          <label for="reg-password" class="field-label">Senha</label>
+          <div class="password-wrap">
+            <input type="password" id="reg-password" class="field-input" placeholder="mínimo 6 caracteres" autocomplete="new-password">
+            <button type="button" class="toggle-password" aria-label="Mostrar senha" data-target="reg-password">
+              <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="reg-confirm" class="field-label">Confirmar senha</label>
+          <div class="password-wrap">
+            <input type="password" id="reg-confirm" class="field-input" placeholder="repita a senha" autocomplete="new-password">
+            <button type="button" class="toggle-password" aria-label="Mostrar confirmação" data-target="reg-confirm">
+              <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button type="button" id="btn-register" class="btn-primary">Cadastrar</button>
+      </div>
+
+      <p class="auth-switch">
+        Já tem uma conta?
+        <a href="login.html" class="auth-link">Entrar</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="cadastro_script.js"></script>
+</body>
+</html>

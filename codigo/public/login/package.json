@@ -1,0 +1,11 @@
+{
+  "name": "auth-package",
+  "version": "1.0.0",
+  "description": "Páginas de login e cadastro com JSON Server",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

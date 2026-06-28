@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Minha Conta</title>
+
+<link rel="stylesheet" href="account.css">
+
+</head>
+
+<body>
+
+<!-- OVERLAY -->
+<div id="menu-overlay" class="menu-overlay"></div>
+
+
+<!-- BOTÃO MENU -->
+<button id="open-menu">☰</button>
+
+
+<!-- MENU -->
+<div id="global-menu" class="global-menu">
+
+    <button id="close-menu" class="close-btn"></button>
+
+    <nav class="menu-options">
+
+        <a href="#" class="menu-link active">
+            Chat
+        </a>
+
+        <a href="#" class="menu-link">
+            Menu Inicial
+        </a>
+
+        <a href="#" class="menu-link">
+            Fórum
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- CONTEÚDO -->
+<main class="content">
+
+    <div class="config-box">
+
+        <div class="logo">
+            LOGO
+        </div>
+
+        <button class="config-btn" id="btn-seguranca">
+            Segurança
+        </button>
+
+        <button class="config-btn" id="btn-privacidade">
+            Privacidade da Conta
+        </button>
+
+        <button class="config-btn" id="btn-notificacao">
+            Notificações
+        </button>
+
+        <button class="config-btn" id="btn-conta">
+            Conta
+        </button>
+
+    </div>
+
+    <div id="perfil"></div>
+
+</main>
+
+
+<!-- ================================= -->
+<!-- POPUP SEGURANÇA -->
+<!-- ================================= -->
+
+<div id="popup-seguranca" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Configurações de Segurança</h2>
+
+        <button class="popup-option" id="btn-senha">
+            Alterar Senha
+        </button>
+
+        <button class="popup-option" id="btn-2fa">
+            Verificação em 2 Etapas
+        </button>
+
+        <button class="popup-option" id="btn-dispositivos">
+            Dispositivos Conectados
+        </button>
+
+        <button class="popup-option" id="btn-login">
+            Histórico de Login
+        </button>
+
+        <button class="fechar-popup fechar">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- POPUP PRIVACIDADE -->
+<!-- ================================= -->
+
+<div id="popup-privacidade" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Privacidade da Conta</h2>
+
+        <button class="popup-option" id="btn-bloqueados">
+            Usuários Bloqueados
+        </button>
+
+        <button class="popup-option" id="btn-reportadas">
+            Mensagens Reportadas
+        </button>
+
+        <button class="popup-option" id="btn-dados">
+            Controle de Dados
+        </button>
+
+        <button class="fechar-popup fechar">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- POPUP NOTIFICAÇÕES -->
+<!-- ================================= -->
+
+<div id="popup-notificacao" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Notificações</h2>
+
+        <button class="popup-option" id="btn-disponibilidade">
+            Disponibilidade
+        </button>
+
+        <button class="popup-option" id="btn-mensagens">
+            Mensagens
+        </button>
+
+        <button class="popup-option" id="btn-posts">
+            Posts
+        </button>
+
+        <button class="fechar-popup fechar">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- POPUP CONTA -->
+<!-- ================================= -->
+
+<div id="popup-conta" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Conta</h2>
+
+        <button class="popup-option" id="btn-editar">
+            Editar Perfil
+        </button>
+
+        <button class="popup-option" id="btn-sair">
+            Sair da Conta
+        </button>
+
+        <button class="fechar-popup fechar">
+            Fechar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- POPUP DISPOSITIVOS -->
+<!-- ================================= -->
+
+<div id="popup-dispositivos" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Dispositivos Conectados</h2>
+
+        <div id="lista-dispositivos"></div>
+
+        <button id="fechar-dispositivos"
+        class="fechar-popup">
+
+            Fechar
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- POPUP INFO -->
+<!-- ================================= -->
+
+<div id="popup-info" class="popup">
+
+    <div class="popup-content">
+
+        <h2 id="titulo-info"></h2>
+
+        <div id="conteudo-info"></div>
+
+        <button id="fechar-info"
+        class="fechar-popup">
+
+            Fechar
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="configuracoes.js"></script>
+
+</body>
+
+</html>
