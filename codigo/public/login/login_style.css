@@ -1,29 +1,13 @@
-/* variáveis */
-:root {
-  --bg-deep:       #17102a;
-  --bg-card:       #221840;
-  --bg-input:      #271d42;
-  --accent:        #7c5cbf;
-  --accent-light:  #9b7ee0;
-  --accent-glow:   rgba(124, 92, 191, 0.35);
-  --text-primary:  #ede8fb;
-  --text-secondary:#b0a8cc;
-  --text-muted:    #7a6d9b;
-  --border:        rgba(124, 92, 191, 0.22);
-  --danger:        #e06080;
-  --success:       #5ec97d;
-  --radius:        14px;
-  --transition:    0.22s ease;
-}
+@import url("../assets/css/sidebar-theme.css");
 
-/* reset */
+/* adopt site typography and color palette */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
   height: 100%;
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg-deep);
-  color: var(--text-primary);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-white);
 }
 
 img { display: block; }
@@ -56,13 +40,13 @@ button, input { font-family: inherit; font-size: inherit; }
 /* card */
 .auth-card {
   width: 100%;
-  max-width: 400px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 36px 32px 30px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  animation: fadeUp 0.4s ease both;
+  max-width: 420px;
+  background: rgba(28,18,36,0.8);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 34px 28px 28px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  animation: fadeUp 0.36s ease both;
 }
 
 /* logo */
@@ -77,7 +61,7 @@ button, input { font-family: inherit; font-size: inherit; }
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  color: var(--text-primary);
+  color: var(--text-white);
   letter-spacing: -0.5px;
 }
 
@@ -121,13 +105,13 @@ button, input { font-family: inherit; font-size: inherit; }
 .field-input {
   width: 100%;
   padding: 11px 14px;
-  border-radius: var(--radius);
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-white);
   font-size: 14px;
   outline: none;
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition: border-color 0.18s, box-shadow 0.18s;
 }
 .field-input::placeholder { color: var(--text-muted); }
 .field-input:focus {
@@ -163,19 +147,19 @@ button, input { font-family: inherit; font-size: inherit; }
 /* botão */
 .btn-primary {
   width: 100%;
-  padding: 13px;
-  margin-top: 4px;
-  border-radius: var(--radius);
-  background: var(--accent);
-  color: #fff;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 12px;
+  background: var(--message-local);
+  color: var(--text-white);
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.3px;
   border: none;
   cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: 0 4px 18px var(--accent-glow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
 .btn-primary:hover {
   background: var(--accent-light);

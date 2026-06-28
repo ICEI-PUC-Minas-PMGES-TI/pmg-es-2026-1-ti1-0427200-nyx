@@ -11,9 +11,48 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
-let RETURN_URL = "/modulos/login/index.html";
 const API_URL = '/usuarios';
+
+function normalizePath(path) {
+    return path.replace(/\/+/g, '/').replace(/\/$/, '');
+}
+
+function ensureAbsolutePath(path) {
+    const normalized = normalizePath(path || '/');
+    return normalized.startsWith('/') ? normalized : `/${normalized}`;
+}
+
+function getScriptRootPrefix() {
+    const script = document.currentScript || document.querySelector('script[src$="login.js"]');
+    if (!script || !script.src) return '';
+    const url = new URL(script.src, window.location.href);
+    return url.pathname.replace(/\/assets\/js\/login\.js$/, '').replace(/\/$/, '');
+}
+
+function getLoginUrl() {
+    const rootPrefix = getScriptRootPrefix();
+    return `${rootPrefix}/login/login.html`.replace(/\/\/+/g, '/');
+}
+
+function getReturnUrl() {
+    const stored = sessionStorage.getItem('returnURL');
+    if (stored) {
+        return ensureAbsolutePath(stored);
+    }
+    return getLoginUrl();
+}
+
+function isLoginPage(path) {
+    const normalized = ensureAbsolutePath(path);
+    const rootPrefix = getScriptRootPrefix();
+    const loginPaths = [
+        `${rootPrefix}/login/login.html`,
+        `${rootPrefix}/login/index.html`,
+        `${rootPrefix}/modulos/login/login.html`,
+        `${rootPrefix}/modulos/login/index.html`
+    ].map(ensureAbsolutePath);
+    return loginPaths.includes(normalized);
+}
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
@@ -24,17 +63,16 @@ var usuarioCorrente = {};
 // Inicializa a aplicação de Login
 function initLoginApp () {
     let pagina = window.location.pathname;
-    if (pagina != LOGIN_URL) {
+    if (!isLoginPage(pagina)) {
         // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
         sessionStorage.setItem('returnURL', pagina);
-        RETURN_URL = pagina;
 
         // INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
         usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
         if (usuarioCorrenteJSON) {
             usuarioCorrente = JSON.parse (usuarioCorrenteJSON);
         } else {
-            window.location.href = LOGIN_URL;
+            window.location.href = getLoginUrl();
         }
 
         // REGISTRA LISTENER PARA O EVENTO DE CARREGAMENTO DA PÁGINA PARA ATUALIZAR INFORMAÇÕES DO USUÁRIO
@@ -44,8 +82,7 @@ function initLoginApp () {
     }
     else {
         // VERIFICA SE A URL DE RETORNO ESTÁ DEFINIDA NO SESSION STORAGE, CASO CONTRARIO USA A PÁGINA INICIAL
-        let returnURL = sessionStorage.getItem('returnURL');
-        RETURN_URL = returnURL || RETURN_URL
+        RETURN_URL = getReturnUrl();
         
         // INICIALIZA BANCO DE DADOS DE USUÁRIOS
         carregarUsuarios(() => {
@@ -98,7 +135,7 @@ function loginUser (login, senha) {
 // Apaga os dados do usuário corrente no sessionStorage
 function logoutUser () {
     sessionStorage.removeItem ('usuarioCorrente');
-    window.location = LOGIN_URL;
+    window.location = getLoginUrl();
 }
 
 function addUser (nome, login, senha, email) {

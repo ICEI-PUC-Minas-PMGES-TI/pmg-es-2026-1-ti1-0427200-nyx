@@ -46,12 +46,12 @@ async function startSession(user) {
     bio: user.bio
   }));
 
-  window.location.href = 'home.html';
+  window.location.href = '../modulos/tela-forum/forum.html';
 }
 
 // guard: redireciona se já estiver logado
 function checkAlreadyLoggedIn() {
-  if (sessionStorage.getItem('current_user')) window.location.href = 'home.html';
+  if (sessionStorage.getItem('current_user')) window.location.href = '../modulos/tela-forum/forum.html';
 }
 
 // mostrar/ocultar senha

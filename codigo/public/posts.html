@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Post</title>
-
+    <link rel="stylesheet" href="./assets/css/chat.css" />
+    <link rel="stylesheet" href="./assets/css/sidebar-theme.css" />
     <link rel="stylesheet" href="./assets/css/posts.css" />
 </head>
 <body>
-
-<div class="container">
-
-    <h1>Criar Publicação</h1>
-
-    <form id="postForm">
-
-        <label>Título</label>
-        <input type="text" id="titulo" required>
-
-        <label>Legenda</label>
-        <textarea id="legenda" rows="6"></textarea>
-
-        <label>Foto ou Vídeo</label>
-        <input type="file" id="arquivo"
-        accept="image/*,video/*" required>
-
-        <button type="submit">
-            Publicar
-        </button>
-
-    </form>
-
-</div>
-
-<script src="app.js"></script>
-
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-top-actions">
+                <button id="open-menu" class="open-menu-btn">☰</button>
+            </div>
+            <div class="sidebar-header">
+            </div>
+            <div class="sidebar-user-panel">
+                <div class="user-info">
+                    <div class="avatar-container">
+                        <img src="assets/images/placeholder-avatar.png" alt="Avatar" class="my-avatar" onerror="this.src='https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Nyx'">
+                    </div>
+                    <div class="user-text">
+                        <span class="user-name">Usuário</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <section class="main-page">
+                <h1>Criar Publicação</h1>
+                <form id="postForm">
+                    <label>Título</label>
+                    <input type="text" id="titulo" required>
+                    <label>Legenda</label>
+                    <textarea id="legenda" rows="6"></textarea>
+                    <label>Foto ou Vídeo</label>
+                    <input type="file" id="arquivo" accept="image/*,video/*" required>
+                    <button type="submit">Publicar</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/sidebar-nav.js"></script>
+    <script src="app.js"></script>
 </body>

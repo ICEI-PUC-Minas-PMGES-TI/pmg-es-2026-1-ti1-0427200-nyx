@@ -1,25 +1,65 @@
 {
-  "usuarios": [
+  "session": {
+    "id": 1,
+    "current_user_id": "u0"
+  },
+  "users": [
     {
-      "id": 1,
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "id": "u0",
+      "username": "ShibuyaDesu",
+      "password": "shibuya123",
+      "avatar": "https://i.pinimg.com/736x/7a/f8/54/7af854bdcc9d4fec5b0d50d34506e7c1.jpg",
+      "is_online": true,
+      "bio": "Jogadora de FPS nas horas vagas.",
+      "interesses": [
+        "Gaming",
+        "Music",
+        "Technology",
+        "Art"
+      ],
+      "friends": [
+        "u1",
+        "u2"
+      ]
     },
     {
-      "id": 2,
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "id": "u1",
+      "username": "MorganaLover123",
+      "password": "morgana123",
+      "avatar": "https://i.pinimg.com/736x/00/91/d3/0091d3d01515a9eb769f83dbf918afd1.jpg",
+      "is_online": true,
+      "bio": "Suporte mono Morgana.",
+      "interesses": [
+        "Gaming",
+        "Music",
+        "Art"
+      ],
+      "friends": []
     },
     {
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "id": "u2",
+      "username": "Omae🌾🌾🌾",
+      "password": "omae123",
+      "avatar": "https://media1.tenor.com/m/uGbBwhfRcZ4AAAAd/omae.gif",
+      "is_online": false,
+      "bio": "Gosto de jogos de simulação e fazendinha.",
+      "interesses": [
+        "Gaming",
+        "Photography",
+        "Travel",
+        "Cooking"
+      ],
+      "friends": []
+    },
+    {
+      "id": "u_mqy0ppvm",
+      "username": "name",
+      "password": "testtest",
+      "bio": "test",
+      "avatar": "https://api.dicebear.com/7.x/bottts-neutral/svg?seed=name",
+      "is_online": true,
+      "interesses": [],
+      "friends": []
     }
   ]
 }

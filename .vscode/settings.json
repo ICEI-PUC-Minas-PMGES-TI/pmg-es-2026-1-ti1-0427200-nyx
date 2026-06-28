@@ -1,6 +1,7 @@
 {
-    "files.watcherExclude": {
-        "**/Icon?": true
-    },
-    "liveServer.settings.port": 5501
+  "files.watcherExclude": {
+    "**/Icon?": true
+  },
+  "liveServer.settings.port": 5501,
+  "liveServer.settings.root": "/public"
 }

@@ -19,15 +19,21 @@ body {
     background: var(--bg-gradient);
     color: var(--text-white);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .app-container {
     display: flex;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
 }
 
 /* --- SIDEBAR --- */
@@ -39,6 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
 }
 
 /* Botão fixo no canto superior esquerdo */
@@ -109,6 +117,28 @@ body {
     cursor: pointer;
 }
 
+.main-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border-radius: 24px;
+    margin: 20px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+}
+
+.main-page h1,
+.main-page h2,
+.main-page h3 {
+    margin-bottom: 12px;
+}
+
+.main-page p,
+.main-page li {
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -154,6 +184,15 @@ body {
     width: 38px;
     height: 38px;
     flex-shrink: 0; 
+}
+
+.avatar-container img,
+.my-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .user-text {
@@ -382,3 +421,27 @@ body {
 
 .status-online { background-color: #43b581; }
 .status-offline { background-color: #747f8d; }
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .main-page {
+        padding: 20px;
+        margin: 0;
+        border-radius: 0;
+    }
+}
